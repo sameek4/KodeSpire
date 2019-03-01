@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <title>Details Customization</title>
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+  integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="../CSS/MainStyle.css">
+  <link href="../CSS/NavMenuStyle.css" rel="stylesheet" type="text/css" />
+  <link href="../CSS/Icons.css" rel="stylesheet" type="text/css" />
+  <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Cantarell:400|Droid+Serif' rel='stylesheet' type='text/css'>
+  <link href="https://fonts.googleapis.com/css?family=Slabo+27px" rel="stylesheet">
+  <link href="../CSS/Skin.css" rel="stylesheet" type="text/css" />
+  <script src="../Scripts/NavMenu.js" type="text/javascript"></script>
+  <script src="../Scripts/Documentation.js" type="text/javascript"></script>
+ <script src="../Scripts/clipboard.min.js"></script>
+
+  <link href="../CSS/CustomStyle1.css" rel="stylesheet"/>
+  <!-- Fonts -->
+
+  <link rel="stylesheet" href="https://azure.microsoft.com/en-us/asset/menucss/" />
+
+
+  <!-- Plugin CSS -->
+  <link href="../CSS/magnific-popup.css" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="../CSS/creative.min.css" rel="stylesheet">
+</head>
+
+<body>
+        <header>
+          <a id="NavMenuLink" href="../Pages/NavigationMenu.html"></a>
+        </header>
+
+<section>
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6">
+              <h1>Details Panel Customization</h1>
+              <p>The Details Panel consists of a set of exposable parameters or functions that you can tweak to edit the properties of your currently selected objects in your Editor Viewport.
+              For example, if you have a static mesh actor selected in your level viewport, the Details panel will allow you to change the materials of the selected actor, edit its transform, or change the mesh itself.</p>
+              <p>The Details Panel can be completely customized to allow you to override the prebuilt set of properties , add your own properties , or even redesign the panel with your own set of Slate based controls. This can be very useful if you are looking for creating custom
+              editor tools and want to add custom functionalities for specific Actors within your Viewport. </p>
+              <p class="ParagraphStyle1">The Details panel Customization is not specific to only actors placed within the level , details panel are also there within your blueprints , static mesh editor and most of the
+              tools that you are familiar with, but that is a discussion for another day. We will get there , no worries.</p>
+             <a class="DownloadButton" href="#" role="button">Download Sample Code</a>
+            </div>
+
+            <!-- data-src is the youtube video id -->
+            <div class="col-md-4">
+              <!-- Cover image -->
+              <img style=" width: 180%;" src="../Images/DetailCustomization/DetailCustomizationCover.png" class="card-img-top" alt="">
+              <!-- 16:9 aspect ratio (bootstrap component) -->
+            </div>
+          </div>
+          </div>
+            <div class="container" style="margin-top:40px;">
+                        <p  class = "HeaderStyle">Default Customization</p>
+                        <p>If you have experience with Unreal C++ you must be aware of UPROPERTY() type variables. When you are creating an Actor class in C++ that needs to be placed in your viewport, you expose several of its variables to be modified via
+                        Blueprints or from the Details Panel.</p>
+                        <div class = "CodeHeader1">
+                           <code class = "CodeStyle1">
+                                <span class="pln">UPROPERTY</span><span class="pun">(</span><span class="typ">EditAnyWhere , BlueprintReadWrite , Category = "Attributes"</span><span class="pun">)</span><span class="pln">
+                               </span><span class="kwd">float</span><span class="pln"> </span><span class="typ">MaxStamina</span><span class="pun">;</span><span class="pln">
+                           </code>
+                        </div>
+                        <p>The <span class = "TextStyleDetails1">EditAnyWhere</span> Specifier allows the property to be edited anywhere, in Blueprints or in level editor Details Panel. The <span class = "TextStyleDetails1">VisibleAnyWhere</span>
+                           Specifier shows the property in the Details panel but cannot be directly edited.</p>
+                          <p>To know more about <span class = "TextStyleDetails1">UPROPERTY</span> and various specifiers you can use , you can refer to
+                        <a class="Link" href="https://wiki.unrealengine.com/UPROPERTY" target="_blank">https://wiki.unrealengine.com/UPROPERTY</a>.</p>
+
+                        <p>If you want your properties to be editable only if certain conditions are met, you can use  <span class = "TextStyleDetails1">EditCondition</span> metadata.</p>
+
+                        <div class = "CodeHeader1">
+                          <code class = "CodeStyle1">
+                            <span class="pln">UPROPERTY</span><span class="pun">(</span><span class="typ">EditAnyWhere , BlueprintReadWrite , Category = "Attributes"</span><span class="pun">)</span><span class="pln">
+                           </span><span class="kwd">bool</span><span class="pln"> </span><span class="typ">bAllowMagic</span><span class="pun">;</span><span class="pln">
+
+                           </code>
+                        </div>
+                        <div class = "CodeHeader1">
+                        <code class = "CodeStyle1">
+                            <span class="pln">UPROPERTY</span><span class="pun">(</span><span class="typ">EditAnyWhere , BlueprintReadWrite , Category = "Attributes", meta = (EditCondition = "bAllowMagic"</span><span class="pun">))</span><span class="pln">
+                           </span><span class="kwd">float</span><span class="pln"> </span><span class="typ">MaxMana</span><span class="pun">;</span><span class="pln">
+                         </code>
+                        </div>
+                        <p>To know more about various metadata specifiers you can use , you can refer to
+                      <a class="Link" href="https://docs.unrealengine.com/en-us/Programming/UnrealArchitecture/Reference/Metadata" target="_blank">https://docs.unrealengine.com/en-us/Programming/UnrealArchitecture/Reference/Metadata</a>.</p>
+                     <p>If you want to add combobox in you Details Panel, you can use Enum Properties.
+                     <div class = "CodeHeader1">
+                       <code class = "CodeStyle1">
+                           <span class="pln">UENUM</span><span class="pun">(</span><span class="typ">BlueprintType</span><span class="pun">)</span>
+                           <span class="kwd">enum class </span><span style="color:  #035f65; font-weight:bold;">ECharacterClass : uint8</span>
+                            <span class="pun">{</span>
+                            <span class="typ" style="padding-left:30px;">Mage</span> 	     <span class="pln">UMETA</span>(DisplayName = <span style="color:  #b6551d ; font-weight:bold;">"Mage"</span>),
+                            <span class="typ" style="padding-left:30px;">Warrior</span> 	     <span class="pln">UMETA</span>(DisplayName = <span style="color:  #b6551d ; font-weight:bold;">"Warrior"</span>),
+                            <span class="typ" style="padding-left:30px;">Rogue</span> 	     <span class="pln">UMETA</span>(DisplayName = <span style="color:  #b6551d ; font-weight:bold;">"Rogue"</span>)
+                            <span class="pun">};</span>
+                        </code>
+                     </div>
+                     <p>When you create a Blueprint Actor and implement your logic within your construction script, you use Editable variables to be able to tweak from your level editor Details panel. However, any tweaking would require the entire construction script to
+                      be executed, thus increasing your compile time. However, creating the base Actor class in C++ has an additional advantage of executing only the part of the code which is directly affected by changing the values of a particular editable variable.
+                     To implement this, we override the <span class = "TextStyleDetails1">PostEditChangeProperty</span>  function in our Actor class.</p>
+                     <div class = "CodeHeader1">
+                       <code class = "CodeStyle1">
+                              <span class="com">#if WITH_EDITOR</span>
+                              <span class="kwd">virtual void </span><span class="pln"> </span><span class="typ">PostEditChangeProperty</span><span class="pun">(</span><span class="typ">FPropertyChangedEvent&</span> <span class="typ">PropertyChangedEvent</span><span class="typ">)</span><span class="typ">override</span>;
+                              <span class="com">#endif</span>
+                      </code>
+                     </div>
+                     <p>Default Customizations via UPROPERTY() should be enough most of the time and you may never need further customizations unless you are creating some specific tools where additional controls like a button or dynamic combobox can greatly surve your specific
+                     requirements. My main purpose of this article is to deep dive the details of how exactly you can go along with customizing your Details panel to suit your specific requirements, with step by step examples to help you catch up with the process.</p>
+
+                </div>
+            </section>
+            <div class="container" style="margin-top:-100px;">
+                        <p  class= "HeaderStyle">Getting Started</p>
+                        <p>We need two classes to get started with Details Panel Customization, the <strong>UObject</strong> class containing the properties that are to be exposed for customizations, and the <strong>DetailCustomization</strong> class,
+                          where we are implementing our customization logic.</p>
+                        <p>Let us create an <strong>Actor</strong> class that we can spawn in our level, with few <strong>UProperties</strong>. Go to <strong>File -> New C++ Class</strong> , and choose <strong>Actor</strong> as the parent class.</p>
+                        <img style=" width: 100%;" src="../Images/DetailCustomization/ActorParentClass.png" alt="ActorParentClass">
+                        <div class = "CodeHeader1">
+                           <code class = "CodeStyle1">
+                                <span class="pln">UPROPERTY</span><span class="pun">(</span><span class="typ">EditAnyWhere , BlueprintReadWrite , Category = "Attributes"</span><span class="pun">)</span><span class="pln">
+                               </span><span class="kwd">float</span><span class="pln"> </span><span class="typ">MaxStamina</span><span class="pun">;</span><span class="pln">
+                           </code>
+                        </div>
+                        <p>The <span class = "TextStyleDetails1">EditAnyWhere</span> Specifier allows the property to be edited anywhere, in Blueprints or in level editor Details Panel. The <span class = "TextStyleDetails1">VisibleAnyWhere</span>
+                           Specifier shows the property in the Details panel but cannot be directly edited.</p>
+                          <p>To know more about <span class = "TextStyleDetails1">UPROPERTY</span> and various specifiers you can use , you can refer to
+                        <a class="Link" href="https://wiki.unrealengine.com/UPROPERTY" target="_blank">https://wiki.unrealengine.com/UPROPERTY</a>.</p>
+
+                        <p>If you want your properties to be editable only if certain conditions are met, you can use  <span class = "TextStyleDetails1">EditCondition</span> metadata.</p>
+
+                        <div class = "CodeHeader1">
+                          <code class = "CodeStyle1">
+                            <span class="pln">UPROPERTY</span><span class="pun">(</span><span class="typ">EditAnyWhere , BlueprintReadWrite , Category = "Attributes"</span><span class="pun">)</span><span class="pln">
+                           </span><span class="kwd">bool</span><span class="pln"> </span><span class="typ">bAllowMagic</span><span class="pun">;</span><span class="pln">
+
+                           </code>
+                        </div>
+                        <div class = "CodeHeader1">
+                        <code class = "CodeStyle1">
+                            <span class="pln">UPROPERTY</span><span class="pun">(</span><span class="typ">EditAnyWhere , BlueprintReadWrite , Category = "Attributes", meta = (EditCondition = "bAllowMagic"</span><span class="pun">))</span><span class="pln">
+                           </span><span class="kwd">float</span><span class="pln"> </span><span class="typ">MaxMana</span><span class="pun">;</span><span class="pln">
+                         </code>
+                        </div>
+                        <p>To know more about various metadata specifiers you can use , you can refer to
+                      <a class="Link" href="https://docs.unrealengine.com/en-us/Programming/UnrealArchitecture/Reference/Metadata" target="_blank">https://docs.unrealengine.com/en-us/Programming/UnrealArchitecture/Reference/Metadata</a>.</p>
+                     <p>If you want to add combobox in you Details Panel, you can use Enum Properties.
+                     <div class = "CodeHeader1">
+                       <code class = "CodeStyle1">
+                           <span class="pln">UENUM</span><span class="pun">(</span><span class="typ">BlueprintType</span><span class="pun">)</span>
+                           <span class="kwd">enum class </span><span style="color:  #035f65; font-weight:bold;">ECharacterClass : uint8</span>
+                            <span class="pun">{</span>
+                            <span class="typ" style="padding-left:30px;">Mage</span> 	     <span class="pln">UMETA</span>(DisplayName = <span style="color:  #b6551d ; font-weight:bold;">"Mage"</span>),
+                            <span class="typ" style="padding-left:30px;">Warrior</span> 	     <span class="pln">UMETA</span>(DisplayName = <span style="color:  #b6551d ; font-weight:bold;">"Warrior"</span>),
+                            <span class="typ" style="padding-left:30px;">Rogue</span> 	     <span class="pln">UMETA</span>(DisplayName = <span style="color:  #b6551d ; font-weight:bold;">"Rogue"</span>)
+                            <span class="pun">};</span>
+                        </code>
+                     </div>
+                     <p>When you create a Blueprint Actor and implement your logic within your construction script, you use Editable variables to be able to tweak from your level editor Details panel. However, any tweaking would require the entire construction script to
+                      be executed, thus increasing your compile time. However, creating the base Actor class in C++ has an additional advantage of executing only the part of the code which is directly affected by changing the values of a particular editable variable.
+                     To implement this, we override the <span class = "TextStyleDetails1">PostEditChangeProperty</span>  function in our Actor class.</p>
+                     <div class = "CodeHeader1">
+                       <code class = "CodeStyle1">
+                              <span class="com">#if WITH_EDITOR</span>
+                              <span class="kwd">virtual void </span><span class="pln"> </span><span class="typ">PostEditChangeProperty</span><span class="pun">(</span><span class="typ">FPropertyChangedEvent&</span> <span class="typ">PropertyChangedEvent</span><span class="typ">)</span><span class="typ">override</span>;
+                              <span class="com">#endif</span>
+                      </code>
+                     </div>
+                     <p>Default Customizations via UPROPERTY() should be enough most of the time and you may never need further customizations unless you are creating some specific tools where additional controls like a button or dynamic combobox can greatly surve your specific
+                     requirements. My main purpose of this article is to deep dive the details of how exactly you can go along with customizing your Details panel to suit your specific requirements, with step by step examples to help you catch up with the process.</p>
+
+                </div>
+</section>
+
+          <!-- Optional JavaScript -->
+          <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+          <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+          <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+          <script src=",,/Scripts/Documentation.js"></script>
+        </body>
+        </html>

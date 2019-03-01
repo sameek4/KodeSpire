@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <title>Dynamic KeyBinding System</title>
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+  integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="../CSS/MainStyle.css">
+  <link href="../CSS/NavMenuStyle.css" rel="stylesheet" type="text/css" />
+  <link href="../CSS/Icons.css" rel="stylesheet" type="text/css" />
+  <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Cantarell:400|Droid+Serif' rel='stylesheet' type='text/css'>
+  <link href="https://fonts.googleapis.com/css?family=Slabo+27px" rel="stylesheet">
+  <link href="../CSS/Skin.css" rel="stylesheet" type="text/css" />
+  <script src="../Scripts/NavMenu.js" type="text/javascript"></script>
+  <script src="../Scripts/Documentation.js" type="text/javascript"></script>
+ <script src="../Scripts/clipboard.min.js"></script>
+  <link href="../CSS/DocumentationStyle.css" rel="stylesheet"/>
+  <link href="../CSS/CustomStyle1.css" rel="stylesheet"/>
+  <!-- Fonts -->
+  <link rel="stylesheet" href="https://azure.microsoft.com/en-us/asset/menucss/" />
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!-- Plugin CSS -->
+  <link href="../CSS/magnific-popup.css" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="../CSS/creative.min.css" rel="stylesheet">
+
+
+</head>
+
+<body>
+
+        <header>
+        <a id="NavMenuLink" href="../Pages/NavigationMenu.html"></a>
+        </header>
+
+        <div class="sidenav ">
+
+           <a href="#Home">Dynamic KeyBinding System</a>
+           <!-- <button class="dropdown-btn">
+             <i class="fa fa-caret-down"></i>
+           </button> -->
+             <div class="dropdown-container">
+             <a href="#Features">Features</a>
+             <a href="#Overview">Overview</a>
+                <div class="dropdown-container">
+                 <a href="#KeyBindingStructure">KeyBinding Structure</a>
+                 <a href="#BindingCategories">Binding Categories</a>
+                 <a href="#BindingDependencies">Binding Dependencies</a>
+                 <a href="#KeyIconMapping">Key-Icon Mapping</a>
+                 <a href="#InstructionTemplate">Instruction Template</a>
+                 <a href="#KeyBindingObject">KeyBinding Object</a>
+               </div>
+
+             <a href="#KeyCustomization">Getting Started with Key Customization</a>
+             <div class="dropdown-container">
+              <a href="#CreatingKeyCustomizationWidget">Creating KeyCustomization Widget</a>
+                  <div class="dropdown-container">
+                   <a href="#TheDependencyMap">The Dependency Map</a>
+                   <a href="#TheCachedBinding">The Cached Binding</a>
+                   <a href="#CheckExistingBinding">Check Existing Binding</a>
+                   <a href="#UpdateBindingCache">Update Binding Cache</a>
+                   <a href="#GetKeyIcon">Get Key Icon</a>
+                   <a href="#UpdateKeyBinding">Update Key Binding</a>
+                   <a href="#ResetBindingData">Reset Binding Data</a>
+                   <a href="#ClearBindingCache">Clear Binding Cache</a>
+                 </div>
+
+              <a href="#UpdateIndependentBindinngs">Update Independent Bindinngs</a>
+              <div class="dropdown-container">
+               <a href="#GetBindingfromAction">Get Binding from Action</a>
+               <a href="#UpdateAxisBinding">Update Axis Binding</a>
+              </div>
+             </div>
+
+             <a href="#InstructionTemplate2">Getting Started with Instruction Template</a>
+               <div class="dropdown-container">
+                <a href="#AddingInstructions">Adding Instructions</a>
+                  <div class="dropdown-container">
+                     <a href="#AddingNewInstruction">Adding New Instruction</a>
+                     <a href="#AddingMultipleInstructions">Adding Multiple Instructions</a>
+                  </div>
+                <a href="#CreatingInstructionWidget">Creating Instruction Widget</a>
+                <div class="dropdown-container">
+                   <a href="#InstructionInitializedEvent">Instruction Initialized Event</a>
+                   <a href="#ProcessInstruction">Process Instruction</a>
+                   <a href="#InstructionFinishedEvent">Instruction Finished Event</a>
+                   <a href="#NotifyInstructionFinished">Notify Instruction Finished</a>
+                </div>
+              </div>
+             <a href="#End">The End</a>
+           </div>
+       </div>
+
+   <div class="container">
+      <section id = "Home">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6">
+              <h1>Dynamic KeyBinding System</h1>
+              <p class="ParagraphStyle2">Dynamic KeyBinding System is a plugin created to aid in reconfiguration of keys at runtime, with customizable instruction template , keybinding menu system ,  keyicon mapping and dependency bindings allowing you to
+                quicky start creating your own KeyBinding Menu and Instruction system in no time.</p>
+              <p>Key reconfiguration at runtime is used in almost every game and is a very useful feature for game developers, with instructions to follow along for convenience of the user during gameplay is another feature used in conjunction with keybinding.
+                This plugin combines both these extremely useful features and being inspired from the different techniques used in different types of games, adds a great deal of customizations to allow the user to quickly start implementing this feature according to project specific requirements.</p>
+             <a class="DocumentLink" href="https://www.unrealengine.com/marketplace/dynamic-keybinding-system"  target="_blank" role="button">Get It Here</a>
+            </div>
+
+            <div class="col-md-4">
+              <!-- Cover image -->
+              <img alt="FrameCapture" style=" width: 150%; height:auto;" src="../Images/KeyBinding/CoverImage.png">
+            </div>
+          </div>
+          </div>
+            <div class="container" style="margin-top:40px;">
+
+            </div>
+      </section>
+
+      <section id = "Features" class="text-center" style="margin-top:-100px;">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-12 text-center">
+              <h2 class="section-heading">Features</h2>
+              <hr class="my-4">
+            </div>
+          </div>
+        </div>
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-4 col-md-4 text-center">
+              <div class="service-box mt-5 mx-auto">
+                <img style=" width: 30%;" src="../Images/Icons/KeyReconfigurationIcon.png">
+                <h3 class="mb-3">Key Reconfiguration</h3>
+                <p class=" text-muted mb-0" style="padding-top:30px;">Reconfigure Keys at runtime</p>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-4 text-center">
+              <div class="service-box mt-5 mx-auto">
+                <img style=" width: 30%;" src="../Images/Icons/InstructionIcon.png">
+                <h3 class="mb-3">Instruction Template</h3>
+                <p class="text-muted mb-0" style="padding-top:10px;">Create customizable instruction widget based on the current keybinding, with controls over  how the user wants the instruction to appear and disappear</p>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-4 text-center">
+              <div class="service-box mt-5 mx-auto">
+                <img style=" width: 30%;" src="../Images/Icons/KeyIconMapping.png">
+                <h3 class="mb-3">Key-Icon Mapping</h3>
+                <p class="text-muted mb-0" style="padding-top:20px;">Datatable based KeyIcon mapping allows the user to easily map keys with custom icons to display at runtime</p>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-6 col-md-4 text-center">
+              <div class="service-box mt-5 mx-auto">
+                <img style=" width: 30%;" src="../Images/Icons/BindingCategoriesIcon.png">
+                <h3 class="mb-3">Binding Categories</h3>
+                <p class=" text-muted mb-0" style="padding-top:30px;">Group a set of Bindings by Categories</p>
+              </div>
+            </div>
+            <div class="col-lg-6 col-md-4 text-center">
+              <div class="service-box mt-5 mx-auto">
+                <img style=" width: 30%;" src="../Images/Icons/DependencyIcon.png">
+                <h3 class="mb-3">Dependency Mapping</h3>
+                <p class="text-muted mb-0" style="padding-top:10px;">Dependency Mapping can be created to perform an additional check if modified key for a given action is already bound to a dependent action. Multibinding group can be used to override dependency</p>
+              </div>
+            </div>
+        </div>
+        </div>
+      </section>
+
+      <section id = "Overview" style="margin-top:-100px;">
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-12 text-center">
+                <h2 class="section-heading">Overview</h2>
+                <hr class="my-4">
+              </div>
+            </div>
+          </div>
+          <div class="container">
+          <div >
+              <p class = "TextStyle1">Before we get started, it is important to get familiar with the contents that are included in this plugin,  and the functionalities of different structures and datatables, that you are going to need for
+                implementing this plugin in your project.</p>
+                <div id = "KeyBindingStructure">
+                    <p class = "TextStyle4">The KeyBinding Structure</p>
+                    <p class = "TextStyle1">To create a set of actions that you want to expose at runtime for reconfiguration , you need to first create the KeyBinding Datatable, derived from the KeyBinding structure.</p>
+                    <img style=" width: 100%;" src="../Images/KeyBinding/KeyBindingStructure.png" alt="KeyBindingStructure">
+                    <div class = "FunctionsTable">
+                      <table class="table table-bordered">
+                        <thead>
+                          <tr>
+                          <th style="text-align:center;">Data Type</th>
+                          <th style="text-align:center;">Description</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                          <td>Internal Name</td>
+                            <td>This is an optional parameter which denotes the name the  given action is saved as in the Binding , if it is different from the Display Name. This is useful when you have multiple bindings for same action, and different display
+                            name for each binding, but you have to have same internal name in that case, otherwise each binding will have a different action. For example, <span class="FunctionName2">Moveforward</span> can be internal name to both forward and
+                            backward movement, which is determined by two different binding set. Similarly, two different categories can have common sets of bindings, but different actions for each category, so display name can be same in respective action of
+                            both categories but internal name should be kept different.</td>
+                        </tr>
+                          <tr>
+                          <td>Display Name</td>
+                            <td>This is the action name that is displayed on screen for a given action. When no Internal Name is specified, this is also the action name for the given binding.</td>
+                        </tr>
+                          <tr>
+                            <td>Primary Key</td>
+                            <td>Primary Key corresponding to the given binding.</td>
+                          </tr>
+                          <tr>
+                            <td>Alternate Key</td>
+                            <td>Alternate Key corresponding to the given binding.</td>
+                          </tr>
+                          <tr>
+                            <td>Binding Category</td>
+                            <td>Category of the Binding the given action belongs to. Categories are custom to the specific project, and can be created by the user. For example, given binding action can fall into <span class="FunctionName2">Movement</span> or
+                              <span class="FunctionName2">Combat</span> category. Categories are mainly useful in designing customized KeyBinding Widget.</td>
+                          </tr>
+                          <tr>
+                            <td>Binding Type</td>
+                            <td>Whether the given Binding is Action or Axis type.</td>
+                          </tr>
+                          <tr>
+                            <td>Scale Multiplier</td>
+                            <td>If the binding is of Axis type, Scale multiplier will multiply the binding scale. This should be a positive number.</td>
+                          </tr>
+                          <tr>
+                            <td>Is Internal</td>
+                            <td>Internal Bindings are excluded from reconfigurable menus. Like if we want to prevent the Escape key from being exposed to reconfiguration, we mark it as Internal.</td>
+                          </tr>
+                          <tr>
+                            <td>Is Inverse</td>
+                            <td>Inverses the Axis Scale of the given binding.</td>
+                          </tr><tr>
+                            <td>Manual Bind</td>
+                            <td>Marking a given binding as Manual Bind allows user to manually restrict the binding action from being executed until specific trigger point is reached. Usually this is linked with Instruction template and if we want the given binding
+                            to only unlock when the corresponding instruction is being displayed on screen, we mark it as Manual Bind, and we check for manual binding in the respective action event.</td>
+                          </tr><tr>
+                            <td>MultiBinding Group</td>
+                            <td>While Dependency Binding allows user to create dependencies between categories, the <span class="FunctionName2">MultiBinding Group</span> overrides the dependencies, i.e. two actions having same group name can be bound to
+                              same or different key.</td>
+                          </tr>
+                       </tbody>
+                      </table>
+                    </div>
+                    <p class = "TextStyle1">Your KeyBinding datatable should contain all the actions that you are looking forward to use in your project, especially the ones you  want to expose for reconfiguration at runtime.</p>
+                    <img style=" width: 100%;" src="../Images/KeyBinding/KeyBindingTable.png" alt="KeyBindingTable">
+                 </div>
+               <div id = "BindingCategories" >
+                   <p class = "TextStyle4">Binding Categories</p>
+                   <p class = "TextStyle1">To create categories for your bindings, you need to modify the <span class="FunctionName2">Binding Category</span> enum, to add your category names. If you take a look into the KeyBinding structure above,
+                     we have a Binding Category column, which takes this enum value, hence specifying the category name for the given action.</p>
+                   <img style=" width: 70%;" src="../Images/KeyBinding/BindingCategories.png" alt="BindingCategories">
+                </div>
+               <div id = "BindingDependencies" >
+                  <p class = "TextStyle4">Binding Dependencies</p>
+                  <p class = "TextStyle1">Adding <span class="FunctionName2">Binding Dependencies</span> will allow you to perform an additional check when the player is trying to add same key for two different bindings.
+                    <span class="FunctionName2">Binding Dependencies</span> are added on category level. So if a category is dependent on another category, then a warning can be displayed on screen when the player is attempting to add a
+                    key in one of the bindings from the former category, which is already bound to another binding from the later category.</p>
+                  <p class = "TextStyle1"><span class="FunctionName2">Binding Category Dependencies</span> structure is where we add our <span class="FunctionName2">Binding Dependencies</span>. This structure contains a <span class="FunctionName2">Binding Category</span> enum
+                    and an array of <span class="FunctionName2">Binding Category</span> enums against the given category.</p>
+                    <img style=" width: 90%;" src="../Images/KeyBinding/BindingDependencies.png" alt="BindingDependencies">
+                  <p class = "TextStyle1">So for example, you have <span class="FunctionName2">Navigation</span> category which is dependent on <span class="FunctionName2">Fight</span> and <span class="FunctionName2">Interactions</span> Categories. Then in the datatable derived from this structure we add both the
+                    categories against the <span class="FunctionName2">Navigation</span> category. Vice versa
+                   is not valid by default so we need to add each Category seperately in our <span class="FunctionName2">Dependency table</span>.</p>
+                   <img style=" width: 70%;" src="../Images/KeyBinding/BindingDependencyTable.png" alt="BindingDependencyTable">
+               </div>
+               <div id = "KeyIconMapping" >
+                 <p class = "TextStyle4">Key-Icon Mapping</p>
+                 <p class = "TextStyle1">We often need to display icons corresponding to specific keys, instead of names of those keys. For example, suppose we have <span class="FunctionName2">Left Mouse Button</span> bound to
+                   <span class="FunctionName2">Fire</span> action, and we want a icon corresponding to the <span class="FunctionName2">Left Mouse Click</span> to be displayed whenever the action key needs to be displayed on screen, we would then
+                   simply need to check out <span class="FunctionName2">Key-Icon</span> mapping to find the Icon connresponding to the given key bound to the given action.</p>
+                 <p class = "TextStyle1">To create our <span class="FunctionName2">Key-Icon</span> Mapping, we create a <span class="FunctionName2">KeyIcon</span> Datatable which is derived from the structure <span class="FunctionName2">KeyIconMap</span>.
+                   We add all the relevent keys and the corresponding icon textures in this datatable.</p>
+                 <img style=" width: 90%;" src="../Images/KeyBinding/KeyIconMapping.png" alt="KeyIconMapping">
+              </div>
+               <div id = "InstructionTemplate" >
+                 <p class = "TextStyle4">Instruction Template</p>
+                 <p class = "TextStyle1">Ingame instructions are essential for almost every game as player often needs to be told about what to do next, or which action serves the specific purpose that will help the player progress further during gameplay.
+                 Customizable Instruction Template aids the user in creating own sets of instructions with a set of useful behaviors to choose from.</p>
+                 <p class = "TextStyle1">The Datatable derived from the <span class="FunctionName2">KeyInstruction</span> structure contains all the instructions that you want to display in the entire game.</p>
+                 <img style="padding: 10px; width: 90%;" src="../Images/KeyBinding/KeyInstruction.png" alt="KeyInstruction">
+                 <div class = "FunctionsTable">
+                   <table class="table table-bordered">
+                     <thead>
+                       <tr>
+                       <th style="text-align:center;">Data Type</th>
+                       <th style="text-align:center;">Description</th>
+                       </tr>
+                     </thead>
+                     <tbody>
+                       <tr>
+                       <td>Start Text</td>
+                         <td>Text that is to be displayed at the start of the instruction.</td>
+                     </tr>
+                       <tr>
+                       <td>Key Actions</td>
+                         <td>An array of <span class="FunctionName2">KeyActionMap</span> structure which contains all the <span class="FunctionName2">KeyActions</span> that are bound to this given instruction.
+                         <div class = "FunctionsTable">
+                           <table style=" background-color:  #8396a747; border: 2px solid #115189 ;border-spacing: 5px;">
+                             <thead>
+                               <tr>
+                               <th style="text-align:center; color:  #115189;">Data Type</th>
+                               <th style="text-align:center; color:  #115189;">Description</th>
+                               </tr>
+                             </thead>
+                             <tbody>
+                               <tr>
+                               <td>Action Name</td>
+                               <td>This is the displayname for the given action.</td>
+                             </tr>
+                               <tr>
+                               <td>Action Internal Name</td>
+                               <td>This is the internal name for the given action. This is optional but necessary to add to avoid name clashes when having same display names for two different actions belonging to different categories.</td>
+                             </tr>
+                               <tr>
+                               <td>Action Seperator</td>
+                               <td>This is a text used to seperate the two action items when the instruction is displayed on screen, usually can be a comma or a space.</td>
+                             </tr>
+                             <tr>
+                             <td>Action Keys</td>
+                             <td>This is an optional parameter, which is usually internally filled based on the action names we have given, but this can be important in cases where we just want a specific key to be pressed which may or may not be bound
+                               to any action.</td>
+                           </tr>
+                           </tbody>
+                           </table>
+                         </div>
+                         </td>
+                     </tr>
+                       <tr>
+                         <td>End Text</td>
+                        <td>Text that is to be displayed at the end of the instruction.</td>
+                       </tr>
+                     </tbody>
+                   </table>
+                 </div>
+              </div>
+               <div id = "KeyBindingObject" >
+                 <p class = "TextStyle4">KeyBinding Object</p>
+                 <p class = "TextStyle1">The <span class="FunctionName2">KeyBinding Object</span> class is where we are going to store references to all our datatables and also our instruction widget template for using at runtime. This class plays a pivotal role in easily adding
+                 instructions on screen, from the given instruction template.</p>
+                 <img style="padding: 10px; width: 100%;" src="../Images/KeyBinding/KeyBindingObjectAsset.png" alt="KeyBindingObjectAsset">
+                 <img style="padding: 10px; width: 100%; padding-top:20px;" src="../Images/KeyBinding/KeyBindingObject.png" alt="KeyBindingObject">
+              </div>
+          </div>
+        </div>
+
+      </section>
+
+      <section id = "KeyCustomization" style="margin-top:-100px;">
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-12 text-center">
+                <h2 class="section-heading">Getting Started with Key Customization</h2>
+                <hr class="my-4">
+              </div>
+            </div>
+          <div >
+              <p class = "TextStyle1">Now that we have learnt about brief overview of various components in this plugin, it is time for us to get started implementing this plugin to create our own KeyBinding system.</p>
+              <p class = "TextStyle1">If you are familiar with GameInstance classes, you must be aware that GameInstances are used to store variables between levels, and if you want to execute a block of codes at the beginning of the
+                  game and not every level, you would rather write that code in your <span class="FunctionName2">GameInstance</span> class and not in PlayerController or any other classes. To initialize our KeyBinding System, we can conveniently
+                  use <span class="FunctionName2">GameInstance</span> class.</p>
+                  <img style="padding: 10px; width: 100%;" src="../Images/KeyBinding/GameInstanceAsset.png" alt="GameInstanceAsset">
+              <p class = "TextStyle1">The static function <span class="FunctionName2">Initialize Binding Data</span> saves the changes to  your datatables in seperate files, to be accessible later.  It also creates and returns an instance to the keybinding object.
+                This instance can be accessed later if saved in a variable.</p>
+                  <img style="padding: 10px; width: 100%; padding-top:20px;" src="../Images/KeyBinding/InitializeBindingData.png" alt="InitializeBindingData">
+              <p class = "TextStyle1">This function takes the class reference of our KeyBinding Object, where we have added references to our Datatable.</p>
+            </div>
+            <div  id = "CreatingKeyCustomizationWidget">
+
+               <p class = "TextStyle4">Creating KeyCustomization Widget</p>
+               <p class = "TextStyle1">Now every game has different requirements when it comes to how the KeyCustomization UI needs to be displayed and behave. You may choose to divide your Action mapping by categories, or you may keep everything together.
+               You may also have Primary as well as Alternate Key mapping for the same action. Some games such as Assassins Creed Origins allow gamepad remapping as well, and also have the option to bind same key for two different actions without interfering the
+               gameplay behavior.</p>
+               <p class = "TextStyle1">Here we will learn how to create a simple KeyCusomization Widget which has the actions divided into Binding Categories and we will implement the Dependency Mapping feature in this example. This is not a simple
+               drag and drop process but will help you get an idea and also understand the functionality that you need to get accustomed with in order to create your own KeyCustomization Widget.</p>
+               <img style="padding: 10px; width: 100%;" src="../Images/KeyBinding/KeyCusomizationDemo.png" alt="KeyCusomizationDemo">
+
+              <div  id = "TheDependencyMap">
+                <p class = "TextStyle5">The Dependency Map</p>
+                <p class = "TextStyle1">We have already learnt how to create the Dependency table, which is basically a mapping between a given category and categories dependent to this category. Now it is important for us to retrieve the Action Data
+                grouped by Binding Categories. So we call the function <span class="FunctionName2">Get Binding Dependency Map</span>, which returns structures of our Binding Data grouped into categories, and also contains the dependency information.</p>
+                <img style="padding: 10px; width: 100%;" src="../Images/KeyBinding/GetBindingDependencyMap.png" alt="GetBindingDependencyMap">
+               </div>
+              <div id = "TheCachedBinding">
+                <p class = "TextStyle5">The Cached Binding</p>
+                <p class = "TextStyle1">Data updated in this KeyCustomization widget is temporarily stored in CachedBinding until we Save the data. So when we are fetching our Binding Data for the given category, we also need to check if the keys for the previously
+                  saved binding is updated in the cache, and fetch the updated Bindings accordingly. The function <span class="FunctionName2">Get Cached Binding</span> will return the modified as well as the unmodified bindings. It is important to clear the cache when we move on to other
+                  widgets to prevent retrieving the unsaved Bindings.</p>
+                <img style="padding: 10px; width: 100%;" src="../Images/KeyBinding/GetCachedBinding.png" alt="GetCachedBinding">
+              </div>
+              <div id = "CheckExistingBinding">
+                  <p class = "TextStyle5">Check Existing Binding</p>
+                  <p class = "TextStyle1">When the user presses a key to modify the current binding with, we first check if the key is already bound to a dependent action. The function <span class="FunctionName2">Check Existing Binding</span> is used to validate
+                  if the current key selected by the user is already bound to another binding dependent to the selected binding.</p>
+                  <img style="padding: 10px; width: 100%;" src="../Images/KeyBinding/CheckExistingBinding.png" alt="CheckExistingBinding">
+                  <p class = "TextStyle1">If you remember you can override the Dependency check for cases where you want to have two Dependent actions bound to same or different key, by specifying same MultiBinding group name in your KeyBinding Table.</p>
+                  <img style="padding: 10px; width: 100%;" src="../Images/KeyBinding/MultiBindingGroup.png" alt="MultiBindingGroup">
+              </div>
+              <div id = "UpdateBindingCache">
+                <p class = "TextStyle5">Update Binding Cache</p>
+                <p class = "TextStyle1">We update the binding cache with the new binding by calling the function <span class="FunctionName2">Update Binding Cache</span>. If you remember, the Binding cache stores all unsaved modifications. This just adds unsaved items in the
+                Binding cache whenever we are rebinding the selected action with new key. This does not permanently save the Binding, and can be cleared later.</p>
+                <img style="padding: 10px; width: 100%;" src="../Images/KeyBinding/UpdateBindingCache.png" alt="UpdateBindingCache">
+              </div>
+              <div id = "GetKeyIcon">
+                <p class = "TextStyle5">Get Key Icon</p>
+                <p class = "TextStyle1">You may choose to display an icon corresponding to a given key. If you remember our KeyIcon mapping, the data we have saved in that KeyIcon Datatable can be retrieved here by calling the function
+                  <span class="FunctionName2">Get Key Icon</span>, which takes the given key as input and returns the corresponding texture.
+                <img style="padding: 10px; width: 100%;" src="../Images/KeyBinding/GetKeyIcon.png" alt="GetKeyIcon">
+              </div>
+              <div id = "UpdateKeyBinding">
+                <p class = "TextStyle5">Update Key Binding</p>
+                <p class = "TextStyle1">To permanently save the modified bindings that are stored in the Binding cache, we call the function <span class="FunctionName2">Update Key Binding</span>.</p>
+                <img style="padding: 10px; width: 100%;" src="../Images/KeyBinding/UpdateKeyBinding.png" alt="UpdateKeyBinding">
+              </div>
+              <div id = "ResetBindingData">
+                <p class = "TextStyle5">Reset Binding Data</p>
+                <p class = "TextStyle1">To reset the Binding data to default values that we have stored in our KeyBinding Datatable, we call the function <span class="FunctionName2">Reset Binding Data</span>.</p>
+                <img style="padding: 10px; width: 100%;" src="../Images/KeyBinding/ResetBindingData.png" alt="ResetBindingData">
+              </div>
+              <div id = "ClearBindingCache">
+                <p class = "TextStyle5">Clear Binding Cache</p>
+                <p class = "TextStyle1">It is important to clear the Binding cache when we move over to other Widgets or resume our game, without saving the modified bindings, in order to prevent displaying the unsaved Bindings the
+                  next time we open our KeyCustomization widget, when we retrieve our Cached Binding. To clear our Binding Cache, we call the function <span class="FunctionName2">Clear Binding Cache</span>.</p>
+                <img style="padding: 10px; width: 100%;" src="../Images/KeyBinding/ClearBindingCache.png" alt="ClearBindingCache">
+              </div>
+
+           </div>
+            <div  id = "UpdateIndependentBindinngs">
+                <p class = "TextStyle4">Update Independent Bindinngs</p>
+                <p class = "TextStyle1">We just learnt how to create a KeyConfiguration system based on Dependent Bindings. What there maybe Bindings which are unique in themselves, independent to other bindings and deserve seperate UI system.
+                There are three very common independent bindings that we find in KeyConfiguration menu in almost all games, namely, Mouse Sensitivy, and Inverted Mouse X and Y axis.</p>
+                <img style="padding: 10px; width: 100%;" src="../Images/KeyBinding/IndependentBindings.png" alt="IndependentBindings">
+
+                <div  id = "GetBindingfromAction">
+                  <p class = "TextStyle5">Get Binding from Action</p>
+                  <p class = "TextStyle1">Call the function <span class="FunctionName2">Get Binding from Action</span> to get the binding data of a single action by action name. From your Binding data, you can get your current scale value,
+                  which you can use to display in your UI, like in your Mouse Sensitivity you can get the current scale value and position your slider accordingly.</p>
+                  <img style="padding: 10px; width: 100%;" src="../Images/KeyBinding/GetBindingfromAction.png" alt="GetBindingfromAction">
+                </div>
+                <div id = "UpdateAxisBinding">
+                  <p class = "TextStyle5">Update Axis Binding</p>
+                  <p class = "TextStyle1">Call the function <span class="FunctionName2">Update Axis Binding from Action Name</span> to update axis value of an individual binding.</p>
+                  <img style="padding: 10px; width: 100%;" src="../Images/KeyBinding/UpdateAxisBinding.png" alt="UpdateAxisBinding">
+               </div>
+              </div>
+          </div>
+      </section>
+
+      <section id = "InstructionTemplate2" style="margin-top:-100px;">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-12 text-center">
+              <h2 class="section-heading">Getting Started with Instruction Template</h2>
+              <hr class="my-4">
+            </div>
+          </div>
+        </div>
+        <div class="container">
+          <div >
+            <p class = "TextStyle1">Instructions and In-game tutorials that tell you what do to next, which keys to press to progress further, are very common in games. But how you want to display the instructions and whether the instructions
+            will be processed on respective key pressed, or automatically after a time interval, or on manual button pressed, depends on the project. So here we will learn how to use plugin to build your own custom the Instruction Template.</p>
+            <p class = "TextStyle1">If you remember, the <span class="FunctionName2">KeyInstruction</span> datatable, derived from the <span class="FunctionName2">KeyInstruction</span> structure, contains a list of all the instructions that you want to display.</p>
+            <img style="padding: 10px; width: 100%;" src="../Images/KeyBinding/KeyInstructionTable.png" alt="KeyInstructionTable">
+          </div>
+
+          <div>
+
+          <div id = "AddingInstructions">
+            <p class = "TextStyle4">Adding Instructions on Screen</p>
+            <p class = "TextStyle1">So in our gameinstance we have called the function <span class="FunctionName2">Initialize Binding Data</span> which returns an instance of the created <span class="FunctionName2">KeyBindingObject</span>.
+              We save this variable here, because we can add instructions to our game via this <span class="FunctionName2">KeyBindingObject</span> only.</p>
+            <img style="padding: 10px; width: 100%; padding-top:20px;" src="../Images/KeyBinding/InitializeBindingData2.png" alt="InitializeBindingData">
+
+            <div id = "AddingNewInstruction">
+            <p class = "TextStyle5">Adding New Instruction</p>
+            <p class = "TextStyle1">To add a new instruction we take a reference to our <span class="FunctionName2">KeyBindingObject</span> instance, and call the function <span class="FunctionName2">Add New Instruction</span>.
+            <img style="padding: 10px; width: 100%;" src="../Images/KeyBinding/AddNewInstruction.png" alt="AddNewInstruction">
+            <div class = "FunctionsTable">
+              <table class="table table-bordered">
+                <thead>
+                  <tr>
+                  <th style="text-align:center;">Input</th>
+                  <th style="text-align:center;">Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                  <td>Instruction ID</td>
+                    <td>InstructionID is the row number for the row in your KeyInstruction Datatable, which contains the Instruction data you want to currently use.
+                  </tr>
+                  <tr>
+                  <td>Start Delay</td>
+                    <td>Starting Delay before the Instruction appears.</td>
+                </tr>
+                  <tr>
+                    <td>End Delay</td>
+                    <td>Ending Delay before the Instruction disappears.</td>
+                  </tr>
+                  <tr>
+                    <td>Destroy Type</td>
+                    <td>How the current instruction is going to be destroyed.
+                      <div class = "FunctionsTable">
+                        <table style=" background-color:  #8396a747; border: 2px solid #115189 ;border-spacing: 5px;">
+                          <thead>
+                            <tr>
+                            <th style="text-align:center; color:  #115189;">Destroy Type</th>
+                            <th style="text-align:center; color:  #115189;">Description</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                            <td>Auto</td>
+                            <td>Automatically destroys after ending delay.</td>
+                            </tr>
+                            <tr>
+                            <td>Any Key Pressed</td>
+                            <td>Widget is destroyed when one of the relevant keys is pressed.</td>
+                            </tr>
+                            <tr>
+                            <td>All Key Pressed</td>
+                            <td>Widget is destroyed when all of the relevant keys are pressed.</td>
+                            </tr>
+                            <tr>
+                            <td>Manual Key</td>
+                            <td>User can destroy the widget manually, by pressing a custom key.</td>
+                            </tr>
+                            <tr>
+                            <td>Manual Click</td>
+                            <td>User needs to destroy the widget manually, preferabl by button click.</td>
+                            </tr>
+                        </tbody>
+                        </table>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Hold Seconds</td>
+                    <td>HoldSeconds determine for how many seconds the player needs to hold the relevant key in order for the Instruction to be processed.</td>
+                  </tr>
+                   </tbody>
+              </table>
+            </div>
+            </div>
+            <div id = "AddingMultipleInstructions">
+            <p class = "TextStyle5">Adding Multiple Instructions</p>
+            <p class = "TextStyle1">If you want to add multiple instructions one by one, which have similar parameters, then you can call the function <span class="FunctionName2">Add Multi Instructions</span>.</p>
+            <img style="padding: 10px; width: 100%;" src="../Images/KeyBinding/AddMultiInstructions.png" alt="AddMultiInstructions">
+           <div class = "FunctionsTable">
+              <table class="table table-bordered">
+                <thead>
+                  <tr>
+                  <th style="text-align:center;">Input</th>
+                  <th style="text-align:center;">Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                  <td>Instruction IDs</td>
+                    <td>InstructionIDs are the row numbers for the rows in your KeyInstruction Datatable, which contain all the Instruction data you want to currently use.
+                  </tr>
+                  <tr>
+                  <td>Start Delay</td>
+                    <td>Starting Delay before each Instruction appears.</td>
+                </tr>
+                  <tr>
+                    <td>End Delay</td>
+                    <td>Ending Delay before each Instruction disappears.</td>
+                  </tr>
+                  <tr>
+                    <td>Destroy Type</td>
+                    <td>How the current Instructions are going to be destroyed.</td>
+                  </tr>
+                  <tr>
+                    <td>Hold Seconds</td>
+                    <td>HoldSeconds determine for how many seconds the player needs to hold the relevant key in order for every Instruction to be processed.</td>
+                  </tr>
+                   </tbody>
+              </table>
+            </div>
+          </div>
+          </div>
+
+          <div id = "CreatingInstructionWidget">
+             <p class = "TextStyle4">Creating Instruction Widget</p>
+             <p class = "TextStyle1">It is upto you how you want to design the Instruction widget, but to be able to integrate your Instruction Widget with my plugin, you have to derive the Widget from the base class <span class="FunctionName2">Instruction Template Widget</span>.</p>
+             <img style="padding: 10px; width: 100%;" src="../Images/KeyBinding/InstructionTemplate.png" alt="InstructionTemplate">
+             <p class = "TextStyle1">Once you created your Instruction Widget you need to add a reference to it in your <span class="FunctionName2">KeyBindingObect</span> BP instance. This is because our <span class="FunctionName2">KeyBindingObect</span> is used
+             to add new instructions on screen and define the behavior of the instructions.</p>
+             <img style="padding: 10px; width: 100%;" src="../Images/KeyBinding/InstructionReference.png" alt="InstructionReference">
+
+            <div id = "InstructionInitializedEvent">
+              <p class = "TextStyle5">The Instruction Initialized Event</p>
+              <p class = "TextStyle1"><span class="FunctionName2">OnInstructionInitialized</span> event is fired when you added a new instruction, after an interval equal to the start delay you provided. This contains the instruction data returned from the
+                <span class="FunctionName2">KeyInstruction</span> datatable row corresponding to the <span class="FunctionName2">InstuctionID</span> you entered. It contains a text appearing at the start of the instruction, a set of actions which correspond
+                to the keybindings respective to the given instruction, and text appearing at the end. It is upto the user how the instruction widget is to be constructed based on the data received.</p>
+              <img style="padding: 10px; width: 100%;" src="../Images/KeyBinding/InstructionInitializedEvent.png" alt="InstructionInitializedEvent">
+            </div>
+            <div id = "ProcessInstruction">
+              <p class = "TextStyle5">Process Instruction</p>
+              <p class = "TextStyle1">Once the Instruction is initialized, we need to call the function <span class="FunctionName2">Process Instruction</span> which performs the next step,
+                e.g. If destroy type is <span class="FunctionName2">AllKeysPressed</span> or <span class="FunctionName2">AnyKeyPressed</span> it waits for the relevant key(s) as user input.</p>
+              <img style="padding: 10px; width: 100%;" src="../Images/KeyBinding/ProcessInstruction.png" alt="ProcessInstruction">
+            </div>
+            <div id = "InstructionFinishedEvent">
+              <p class = "TextStyle5">The Instruction Finished Event</p>
+              <p class = "TextStyle1">This event <span class="FunctionName2">OnInstructionFinished</span> is triggered when an instruction is completed and we can perform the post completion steps here. This event will never be triggered if we have not called the
+                <span class="FunctionName2">ProcessInstruction</span> function , or if the Destroy condition is not met..</p>
+              <img style="padding: 10px; width: 100%;" src="../Images/KeyBinding/InstructionFinishedEvent.png" alt="InstructionFinishedEvent">
+            </div>
+            <div id = "NotifyInstructionFinished">
+              <p class = "TextStyle5">Notify Instruction Finished</p>
+              <p class = "TextStyle1">Once we perform all the post completion steps, we have to call the function <span class="FunctionName2">Notify Instruction Finished</span>. This notifies our <span class="FunctionName2">KeyBindingObject</span> that the current instruction
+                has been completed and we are ready to move on to the next instruction, if any.</p>
+            </div>
+          </div>
+       </div>
+      </section>
+
+      <section id = "End" style="margin-top:-100px;">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-12 text-center">
+              <h2 class="section-heading">The End</h2>
+              <hr class="my-4">
+            </div>
+          </div>
+        </div>
+        <div class="container">
+          <p class = "TextStyle1">Thank you for your time. I hope you find this plugin useful. For technical difficulties, feedback, suggestions, queries, kindly drop me a mail at <i><strong>sameek4@gmail.com</strong></i>. I would love to hear from you.</p>
+       </div>
+     </section>
+   </div>
+          <!-- Optional JavaScript -->
+          <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+          <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+          <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+          <script src="../Scripts/Documentation.js"></script>
+
+<script>
+/* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
+var dropdown = document.getElementsByClassName("dropdown-btn");
+var i;
+
+for (i = 0; i < dropdown.length; i++)
+{
+  dropdown[i].addEventListener("click", function()
+  {
+    this.classList.toggle("active");
+    var dropdownContent = this.nextElementSibling;
+    if (dropdownContent.style.display === "none")
+    {
+      dropdownContent.style.display = "block";
+    }
+    else
+    {
+      dropdownContent.style.display = "none";
+    }
+  });
+
+}
+
+</script>
+
+        </body>
+        </html>

@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <title>MSSQL Integration</title>
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+  integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="../CSS/MainStyle.css">
+  <link href="../CSS/NavMenuStyle.css" rel="stylesheet" type="text/css" />
+  <link href="../CSS/Icons.css" rel="stylesheet" type="text/css" />
+  <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Cantarell:400|Droid+Serif' rel='stylesheet' type='text/css'>
+  <link href="https://fonts.googleapis.com/css?family=Slabo+27px" rel="stylesheet">
+  <link href="../CSS/Skin.css" rel="stylesheet" type="text/css" />
+  <script src="../Scripts/NavMenu.js" type="text/javascript"></script>
+  <script src="../Scripts/Documentation.js" type="text/javascript"></script>
+ <script src="../Scripts/clipboard.min.js"></script>
+  <link href="../CSS/DocumentationStyle.css" rel="stylesheet"/>
+  <link href="../CSS/CustomStyle1.css" rel="stylesheet"/>
+
+
+  <!-- Plugin CSS -->
+  <link href="../CSS/magnific-popup.css" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="../CSS/creative.min.css" rel="stylesheet">
+</head>
+
+<body id="page-top">
+        <header>
+          <a id="NavMenuLink" href="../Pages/NavigationMenu.html"></a>
+        </header>
+
+
+        <section>
+          <div class="container">
+            <div class="row">
+              <div class="col-md-10">
+                <h1>MS-SQL Integration for UE4</h1>
+                <p class="ParagraphStyle2">The MS SQL Integration Plugin brings the power of .Net in Unreal Engine. With this plugin you can store and retrieve data and images from your SQL Server.
+                  Build your own queries and select and update data to your database directly from Blueprints. No restrictions in query formation. Any query working inside SQL Client , works here,
+                  which means you can select and update multiple data at once , use joins and sub-queries, as well as create and drop tables via Blueprints..</p>
+                <p>If you have worked with SQL, you must be very familiar to Select, Update, Insert and Delete SQL queries, joins and sub-queries. If you know C#.Net, and worked with ADO.Net, you must be knowing how to set Connection properties for your Server,
+                  and how to write and execute your SQL Queries within your .NET applications.</p>
+                  <p>But now you can use Blueprints in Unreal Engine 4 to do your job. You are still writing the same queries that you are familiar with, but here you are writing it within Blueprints,
+                     which gives you flexibility to store and retrieve data as well as Images from your MySQL Server to your UE4 projects.</p>
+               <a class="DocumentLink" href="https://www.unrealengine.com/marketplace/ms-sql-integration"  target="_blank" role="button">Get It Here</a>
+            </div>
+            </div>
+
+            </div>
+          </section>
+
+
+        <section  style="margin-top:-150px;">
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-12 text-center">
+                <h2 class="section-heading">Features</h2>
+                <hr class="my-4">
+              </div>
+            </div>
+          </div>
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-3 col-md-6 text-center">
+                <div class="service-box mt-5 mx-auto">
+                  <img style=" width: 30%;" src="../Images/Icons/AsyncIcon.png">
+                  <h3 class="mb-3">Asynchronous Connection</h3>
+                  <p class=" text-muted mb-0">Asynchronously connect your Server via Windows Authentication System as well as SQL Server Authentication System.</p>
+                </div>
+              </div>
+              <div class="col-lg-3 col-md-6 text-center">
+                <div class="service-box mt-5 mx-auto">
+                  <img style=" width: 30%;" src="../Images/Icons/QueryIcon.png">
+                  <h3 class="mb-3">Easy Query Formation</h3>
+                  <p class="text-muted mb-0" style="padding-top:10px;">Form your own query and pass as string input , directly within your Blueprint or C++ class.</p>
+                </div>
+              </div>
+              <div class="col-lg-3 col-md-6 text-center">
+                <div class="service-box mt-5 mx-auto">
+                  <img style=" width: 30%;" src="../Images/Icons/ImageSaveIcon.png">
+                  <h3 class="mb-3">Selection and Insertion of Images</h3>
+                  <p class="text-muted mb-0" style="padding-top:20px;">Easily Save and Retrieve Images from your Database</p>
+                </div>
+              </div>
+              <div class="col-lg-3 col-md-6 text-center">
+                <div class="service-box mt-5 mx-auto">
+                  <img style=" width: 30%;" src="../Images/Icons/ConnectionStringIcon.png">
+                  <h3 class="mb-3">Custom ConnectionString</h3>
+                  <p class="text-muted mb-0">Create custom connection string format with different protocols and other connection parameters, as required by your server.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+       <section  style="margin-top:-150px;">
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-12 text-center">
+                <h2 class="section-heading">Getting Started</h2>
+                <hr class="my-4">
+              </div>
+            </div>
+          </div>
+          <div class="container">
+              <div>
+                  <p class = "TextStyle1">To get started, first ensure that the plugin is installed, by visiting the Plugin Window, as shown below:</p>
+            </div>
+            <div>
+                  <img style=" width: 100%;" src="../Images/DocumentationImages/MSSQLPluginWindow.png" alt="MSSQLPluginWindow">
+            </div>
+            <div>
+                  <p class = "TextStyle1">If you are not familiar with SQL Server at all, you will get plenty of online resources to get you started, and you can definitely test it out by downloading the free version, SQL Server Express.
+                    SQL Server Express is an entry level database server having a limitation of 10 GB size, which is perfect from small scale applications.</p>
+
+            </div><!--//row-->
+            </div><!--//container-->
+
+                 <!--Working with SQL Server Express-->
+                <div class="container">
+                  <div >
+                    <h4 class="SubHeader1">Working with SQL Server Express</h4>
+                    <p class = "TextStyle1"> Assuming that you have your database server up and running, either locally or remotely, to get started working with this plugin, you first need to create a database and a table in your server, where you would like to store all your in-game data.
+                      If you are unsure regarding how to work with SQL Express, let me quickly walk you through the basic steps.  </p>
+                    </div><!--//row-->
+                    <div class = "row" style="text-align:left;">
+                      <ul>
+                        <li style="list-style:line-through;">  <p class = "TextStyle1">Download and install SQL Server Express edition from here : <a href="https://go.microsoft.com/fwlink/?LinkID=799012">https://go.microsoft.com/fwlink/?LinkID=799012</a></p></li>
+                        <li style="list-style:line-through;"><p class = "TextStyle1">Open your SQL Server client and connect to your database server by using Windows Authentication or SQL Server authentication</p>
+                          <p><img style=" width: 50%;" src="../Images/DocumentationImages/SQLLoginWindow.png" alt="SQLLoginWindow"></p>
+                          <p class = "TextStyle1">By default, you will get a local DB server called locahost, which will be saved in your local machine. To create a dedicated server, please go through the steps given here :
+                             <a href="https://docs.microsoft.com/en-us/azure/sql-database/sql-database-get-started">https://docs.microsoft.com/en-us/azure/sql-database/sql-database-get-started</a> </p>
+                          <p class = "TextStyle1">To understand how to create a login, please visit <a href="https://msdn.microsoft.com/en-in/library/aa337562.aspx">https://msdn.microsoft.com/en-in/library/aa337562.aspx</a> </p>
+                        </li>
+                        <li style="list-style:line-through;"><p class = "TextStyle1">Once your database is created, it should be visible in object explorer, within Databases.
+                          Right click on your database name, and open New Query Window. Then create one or more tables, which you want to use for storing and retrieving your game data.</p></li>
+                      </ul>
+                    </div><!--//row-->
+
+                </div>
+
+               <!--Setting Up Database Connection in UE4-->
+                <div class="container">
+                  <div >
+                    <h4 class="SubHeader1">Setting Up Database Connection in UE4</h4>
+                    <p class = "TextStyle1"> Before we begin writing our SQL queries and executing them in our database, we first need to set up a connection within UE4.
+                       This is a onetime setup, and is similar to how we manually connect to our DB Server using Windows or SQL Server Authentication, as shown in the above steps. </p>
+                    <p class = "TextStyle4">Authentication Modes</p>
+                    <p class = "TextStyle1">To set up a DB Connection, we either need to use Windows Authentication mode or SQL Authentication mode.</p>
+                    <ul>
+                      <li style="list-style:line-through;">  <p class = "TextStyle1">Windows Authentication mode authenticates users to use the Database server via Windows Login ID and Password. </p>
+                         <div class = "FunctionsTable">
+                           <table class="table table-bordered">
+                             <thead>
+                               <tr>
+                               <th style="text-align:center;">Function Name</th>
+                               <th style="text-align:center;">Description</th>
+                               </tr>
+                             </thead>
+                             <tbody>
+                               <tr>
+                               <td>Get Current User</td>
+                                 <td>This function returns the current Windows User Name.</td>
+                             </tr>
+                               <tr>
+                               <td>Get Current Domain</td>
+                                 <td>This function returns the current PC Domain.</td>
+                             </tr>
+                               <tr>
+                                 <td>Authenticate User</td>
+                                 <td>This function takes the current user name, domain and password for your Windows account as input and returns the authentication result as a Boolean variable. Please note that this function will not work if the current Windows user does not require any password to login. So you may want to avoid using this function unless absolutely necessary.</td>
+                               </tr>
+                            </tbody>
+                           </table>
+                         </div>
+                      </li>
+                      <li style="list-style:line-through;"><p class = "TextStyle1"> SQL Server Authentication mode uses logins that are created and stored in SQL Server and are not based on Windows user accounts.
+                        Here you need to explicitly enter both your SQL Server ID and password, while setting up the connection property.
+                        To learn about Authentication modes in detail, you can refer here : <a href="https://msdn.microsoft.com/en-us/library/ms144284.aspx">https://msdn.microsoft.com/en-us/library/ms144284.aspx</a> </p>
+                      </li>
+
+                    </ul>
+                      <p class = "TextStyle4">SQL Server Connection</p>
+                      <p class = "TextStyle1">Connection to the SQL Server happens asynchronously. To connect to your server, first you need to call the <i>Set Connection Properties</i> function,
+                        and then add a custom tick event that you need to listen to at every tick to validate the current status of your connection</p>
+                        <ul>
+                          <li style="list-style:line-through;">  <p class = "TextStyle1">The function <span class="FunctionName">Set Connection Properties</span> takes the necessary parameters that your server is going to need , and request for the connection to be established.</p>
+                             <div class = "FunctionsTable">
+                               <table class="table table-bordered">
+                                 <thead>
+                                   <tr>
+                                   <th style="text-align:center;">Inputs</th>
+                                   <th style="text-align:center;">Description</th>
+                                   </tr>
+                                 </thead>
+                                 <tbody>
+                                   <tr>
+                                   <td>Server</td>
+                                     <td>This parameter takes your server address.</td>
+                                 </tr>
+                                   <tr>
+                                   <td>DBName</td>
+                                     <td>This parameter takes the name of your database.</td>
+                                 </tr>
+                                   <tr>
+                                     <td>UserID</td>
+                                     <td>This parameter takes your login ID.</td>
+                                   </tr>
+                                   <tr>
+                                     <td>Password</td>
+                                     <td>This parameter takes your login Password.</td>
+                                   </tr>
+                                   <tr>
+                                     <td>Extra Param</td>
+                                     <td>This parameter takes any extra setting that you might want to add. All individual settings should be seperated by  semicolon and passed as a single string.</td>
+                                   </tr>
+                                   <tr>
+                                     <td>Is Trusted</td>
+                                     <td>If you are using Windows Authentication Mode , you can check Is Trusted, and you do not need to enter your User ID and password in that case. Otherwise, uncheck this paramter.</td>
+                                   </tr>
+                                </tbody>
+                               </table>
+                             </div>
+                             <p><img style="width: 95%;" src="../Images/DocumentationImages/SetConnectionProperties.jpg" alt="SetConnectionProperties"></img></p>
+                             <p class = "TextStyle1">A connection string typically looks like:</p>
+                             <p class = "TextStyle2">Server=myServerAddress;Database=myDataBase;User Id=myUsername;Password=myPassword;</p>
+
+
+                               <p class = "TextStyle1">So if your connectionstring consists of extra parameters , apart from the usual parameters included in the Set Connection Properties function(Server , DBName , UserID , Password , IsTrusted) ,
+                                  you can enter those extra parameters in the <strong>Extra Param</strong> input, seperated by a semicolon. For example , if your connectionstring is something like : </p>
+                                <p class = "TextStyle2">Server=.\SQLExpress;AttachDbFilename=C:\MyFolder\MyDataFile.mdf;Database=dbname;Trusted_Connection=Yes;</p>
+                                <p class = "TextStyle1">Then you need to enter , in your <strong>Extra Param</strong> input :</p>
+                                <p class = "TextStyle2">AttachDbFilename=C:\MyFolder\MyDataFile.mdf;</p>
+                                <p class = "TextStyle1">It must be noted here that you can obviously enter the extra parameters in other inputs as well, like in your <strong>Server</strong> input , you can also write like this : </p>
+                                <p class = "TextStyle2">.\SQLExpress;AttachDbFilename=C:\MyFolder\MyDataFile.mdf;</p>
+                                <p class = "TextStyle1">But it is recommended to use <strong>Extra Param</strong> input for this purpose, just to avoid confusion.</p>
+                                <p class = "TextStyle1">The Server property is not limited to any particular SQL Server type and can accept different string formats, as shown below:</p>
+                                <div class = "FunctionsTable">
+                                  <table class="table table-bordered">
+                                    <thead>
+                                      <tr>
+                                      <th style="text-align:center;">Server Type</th>
+                                      <th style="text-align:center;">String Format</th>
+                                      </tr>
+                                    </thead>
+                                    <tbody>
+                                      <tr>
+                                      <td>Standard Security , TCP/IP</td>
+                                      <td>
+                                       hostname<br/>
+                                       tcp:hostname<br/>
+                                       tcp:hostname, portNumber
+                                      </td>
+                                    </tr>
+                                      <tr>
+                                      <td>Named Pipes</td>
+                                      <td>np:hostname , np:\\hostname\pipe\pipeName</td>
+                                     </tr>
+                                   </tbody>
+                                  </table>
+                                </div>
+                                <p class = "TextStyle1">To learn about various types of Connection String and forming the one that best suits your requirement, you can refer here : <a href="https://www.connectionstrings.com/sql-server/">https://www.connectionstrings.com/sql-server/</a>  </p>
+                          </li>
+                          <li style="list-style:line-through;"><p class = "TextStyle1"> Once your connection has been established, you need to periodically listen to the function <span class="FunctionName">Check Connection State</span> to find out the current state of your connection.
+                          An useful way to do that in Blueprints is using Gates, which is called in Tick function , but is opened after the funciton <i>Set Connection Properties</i> is called.</p>
+                          <div class = "FunctionsTable">
+                            <table class="table table-bordered">
+                              <thead>
+                                <tr>
+                                <th style="text-align:center;">Connection State</th>
+                                <th style="text-align:center;">Description</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                <td>Broken</td>
+                                  <td>The connection to the data source is broken.</td>
+                              </tr>
+                                <tr>
+                                <td>Closed</td>
+                                  <td>The connection is closed.</td>
+                              </tr>
+                                <tr>
+                                  <td>Connecting</td>
+                                  <td>The connection object is connecting to the data source.</td>
+                                </tr>
+                                <tr>
+                                  <td>Executing</td>
+                                  <td>The connection object is executing a command.</td>
+                                </tr>
+                                <tr>
+                                  <td>Fetching</td>
+                                  <td>The connection object is retrieving data.</td>
+                                </tr>
+                                <tr>
+                                  <td>Open</td>
+                                  <td>The connection is open.</td>
+                                </tr>
+                             </tbody>
+                            </table>
+                          </div>
+                          <p><img style="width: 95%;" src="../Images/DocumentationImages/CheckConnectionState.jpg" alt="CheckConnectionState"></img></p>
+                          <p class = "TextStyle1">As long as the current state shows <strong>Connecting</strong>, you can execute other operations, and let the connection happen in the background. When you get current state as <strong>Open</strong>, this means connection is successfully established ,
+                          and now you can proceed with executing queries in your database.</p>
+                          </li>
+
+                        </ul>
+                  </div><!--//row-->
+
+               <!--Writing SQL queries within UE4 Blueprints-->
+                   <div class="container">
+                     <div >
+                       <h4 class="SubHeader1">Writing SQL queries within UE4 Blueprints</h4>
+                       <p class = "TextStyle1"> Once the connection property has been set, you can now start forming your SQL queries. Forming queries can be categorized in two types, queries that modify data to the database (INSERT, UPDATE, DELETE),
+                         or the queries that fetch data from the database (SELECT). We will discuss these two categories one by one.  </p>
+
+                      <p class = "TextStyle4">Update Queries</p>
+                        <p class = "TextStyle1"> To asynchronously modify data in our table , we will use the function <span class="FunctionName">Update data from Query Async</span>.</p>
+                          <p><img style=" width: 100%;" src="../Images/DocumentationImages/UpdateQueryAsync.jpg" alt="UpdateQueryAsync"></p>
+                        <p class = "TextStyle1">After calling the Update function , you need to periodically listen to the function <span class="FunctionName">Check Query Execution State</span> to find out the current state of your function.
+                        Here also you can use Gate within the Tick function, which should be opened after the function <i>Update data from Query Async</i> is called.</p>
+                          <p><img style=" width: 100%;" src="../Images/DocumentationImages/UpdateQueryExecution.jpg" alt="UpdateQueryExecution"></p>
+                          <div class = "FunctionsTable">
+                            <table class="table table-bordered">
+                              <thead>
+                                <tr>
+                                <th style="text-align:center;">Query Execution State</th>
+                                <th style="text-align:center;">Description</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                <td>Executing</td>
+                                  <td>The query is still being executed.</td>
+                              </tr>
+                                <tr>
+                                <td>Success</td>
+                                  <td>The query has been successfully executed.</td>
+                              </tr>
+                                <tr>
+                                  <td>Failed</td>
+                                  <td>The query execution has failed. This generates error message as string output in the <i>Check Query Execution State</i> function.</td>
+                                </tr>
+
+                             </tbody>
+                            </table>
+                          </div>
+                          <p class = "TextStyle1"> If you would like to update data synchronously, you can call the function <span class="FunctionName">Update data from Query</span> which takes a string input where we have to enter our query and executes the query in the database. </p>
+                            <p><img style=" width: 100%;" src="../Images/DocumentationImages/UpdateQuery.jpg" alt="UpdateQuery"></p>
+                            <p class = "TextStyle4">Select Queries</p>
+
+                            <ul>
+                            <li style="list-style:line-through;"><p class = "TextStyle1">
+                              To select data asynchronously, you need to first call the function <span class="FunctionName">Select Data from Query Async</span> which takes a string input where we have to enter our query and fetches the result from the database. </p>
+                              <p><img style=" width: 100%;" src="../Images/MySQL/MySQLSelectQueryAsync.jpg" alt="MySQLSelectQueryAsync">
+                            </li>
+
+                            <li style="list-style:line-through;"><p class = "TextStyle1"> Once you called <span class="FunctionName">Select Data from Query Async</span>, you need to periodically listen to the
+                              function <span class="FunctionName">Check Query Execution State</span> to find out the current state of your query execution.</p>
+                          </li>
+                          <li style="list-style:line-through;"><p class = "TextStyle1"> To select the data once the query execution is successful, call the function <span class="FunctionName">Get Selected Table</span>.</p>
+                            <p><img style=" width: 100%;" src="../Images/DocumentationImages/MSSQLSelectedQueryAsync1.png" alt="MSSQLSelectedQueryAsync1"></p>
+                            <div class = "FunctionsTable">
+                              <table class="table table-bordered">
+                                <thead>
+                                  <tr>
+                                  <th style="text-align:center;">Output Name</th>
+                                  <th style="text-align:center;">Description</th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  <tr>
+                                  <td>Result By Column</td>
+                                    <td><p class = "TextStyle1">This will return an array of structured variable called <strong>MSSQLDataTable</strong>. This represents a column in the table and contains two properties,
+                                      <strong>ColumnName</strong> and <strong>ColumnData</strong>.</p>
+                                        <p> <span class="FunctionName">ColumnName</span></p>
+                                        <p class = "TextStyle1">ColumnName contains the header name of the column of the current instance of our initial array that we get by executing our select query.
+                                          If you want to display data of a specific column, you can use this variable to match the column name.</p>
+                                        <p> <span class="FunctionName">ColumnData</span></p>
+                                        <p class = "TextStyle1">ColumnData is an array of string consisting of all the elements of a given column. So you can easily set up a
+                                          for-loop here to get all the elements of a particular column iteratively.</p>
+                                    </td>
+                                </tr>
+                                  <tr>
+                                  <td>Result By Row</td>
+                                    <td><p class = "TextStyle1">This contains an array of structured variable called <strong>MSSQLDataRow</strong>. This structure contains an array of string that represents values of an entire row.
+                                      So the number of elements in this string array equals number of columns, and number of elements in the Result by Row array equals number of rows in the output of the Select query.
+                                    </p></td>
+                                </tr>
+                               </tbody>
+                              </table>
+                            </div>
+                      </li>
+                    </ul>
+                        <p class = "TextStyle1">Below images display an example of how we can use <strong>Result By Row</strong> and <strong>Result By Column</strong> structures to store and display selected data retrieved from the server to our UE4 UI,
+                          as part of UMG widget.</p>
+                        <p><img style=" width: 100%;" src="../Images/DocumentationImages/ResultByColumn.png" alt="ResultByColumn"></p>
+                        <p><img style=" width: 100%;" src="../Images/DocumentationImages/ResultByRow.png" alt="ResultByRow"></p>
+                          <p class = "TextStyle1"> If you would like to select data synchronously, you can call the function <span class="FunctionName">Select data from Query</span> which takes a string input where we have to enter our query ,
+                             executes the query in the database. and returns the selected data as <strong>Result By Column</strong> and <strong>Result By Row</strong> format.</p>
+                          <p><img style=" width: 100%;" src="../Images/DocumentationImages/SelectDatafromQuery.png" alt="SelectDatafromQuery"></p>
+
+                          <p class = "TextStyle4">Update Images</p>
+                          <p class = "TextStyle1">To save an image to our table, we first need to browse for an image from our desktop. As of now, you cannot directly save UE4 Textures to your database.
+                            Instead, you can directly browse for an image of common types via Blueprints, by calling the function called <span class="FunctionName">Browse File</span>.</p>
+                          <p><img style=" width: 50%; padding-left:30px;" src="../Images/DocumentationImages/BrowseFile.png" alt="BrowseFile"></p>
+                          <p class = "TextStyle1">This function will bring up a File Browser dialogue. On selecting the image file and clicking OK, the dialogue box will close and the function returns the file path.
+                            You may have your separate ways of retrieving image path from your hard drive, so this function is pretty much optional.</p>
+                          <p class = "TextStyle1">Once we have our image file path, we need to fire the function called <span class="FunctionName">Update Image from Query</span> that will update the image to the server.</p>
+                          <p><img style=" width: 100%; padding-left:30px;" src="../Images/DocumentationImages/UpdateImagefromQuery.png" alt="UpdateImagefromQuery"></p>
+                          <div class = "FunctionsTable">
+                            <table class="table table-bordered">
+                              <thead>
+                                <tr>
+                                <th style="text-align:center;">Inputs</th>
+                                <th style="text-align:center;">Description</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                <td>Query</td>
+                                  <td><p class = "TextStyle1">Here we enter our query. So if we want to insert an image in our Picture column, we need to enter it like this:</p>
+                                     <p class = "TextStyle1">INSERT INTO ImageData( Picture)
+                                                              VALUES (@img)</p>
+                                      <p class = "TextStyle1">If we want to insert values in other columns, we can do that as well. </p>
+                                      <p class = "TextStyle1">INSERT INTO ImageData( ID , Picture)
+                                                               VALUES (0, @img)</p>
+                                  </td>
+                              </tr>
+                                <tr>
+                                <td>Update Parameter</td>
+                                  <td><p class = "TextStyle1">This will contain the variable name which should be replaced by our image. In the query above, we are using the word <strong>@img</strong>.
+                                    This is a common way of inserting dynamic data in SQL server, and you must be familiar with it if you have hands on experience in <strong>ADO.NET</strong>.. So this input will take the same parameter as input,
+                                     without the <strong>@</strong>. symbol, to help the program determine what variable is being used to represent image variable. So here we need to enter <strong>img</strong>., as shown in the picture above. </p></td>
+                              </tr>
+                              <tr>
+                              <td>Image Path</td>
+                                <td><p class = "TextStyle1">Here we are providing the image file path that we have received from the previous section.</p></td>
+                            </tr>
+                             </tbody>
+                            </table>
+                          </div>
+
+                          <p class = "TextStyle4">Select Images</p>
+                          <p class = "TextStyle1">To select an image from SQL Server, we simply need to call the function called <span class="FunctionName">Select Image from Query</span> and enter our selection query here.</p>
+                          <p class = "TextStyle1">You need to remember that you can select only one image at a time, so make sure your selection query only fetches a single image and nothing else. For example, when your table has a multiple rows, you cannot write Select Picture
+                            from ImageData as that will fetch multiple values. Instead, you need to write something like:</p>
+                          <p class = "TextStyle1">Select Picture from ImageData Where ID=3</p>
+                          <p><img style=" width: 50%; padding-left:30px;" src="../Images/DocumentationImages/SelectImageFromQuery.png" alt="SelectImageFromQuery"></p>
+                          <p class = "TextStyle1">This function returns a Texture2D format, which you can use to display the image in your game.</p>
+                          <p><img style=" width: 100%;" src="../Images/DocumentationImages/SelectImageExample.png" alt="SelectImageExample"></p>
+                     </div><!--//row-->
+                 </div>
+
+        </section>
+
+        <section id = "End" style="margin-top:-100px;">
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-12 text-center">
+                <h2 class="section-heading">The End</h2>
+                <hr class="my-4">
+              </div>
+            </div>
+          </div>
+          <div class="container">
+            <p class = "TextStyle1">Thank you for your time. I hope you find this plugin useful. For technical difficulties, feedback, suggestions, queries, kindly drop me a mail at <i><strong>sameek4@gmail.com</strong></i>. I would love to hear from you.</p>
+         </div>
+       </section>
+
+
+          <!-- Optional JavaScript -->
+          <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+          <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+          <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+          <script src=",,/Scripts/Documentation.js"></script>
+        </body>
+        </html>

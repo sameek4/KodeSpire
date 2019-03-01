@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <title>FrameCapture</title>
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+  integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="../CSS/MainStyle.css">
+  <link href="../CSS/NavMenuStyle.css" rel="stylesheet" type="text/css" />
+  <link href="../CSS/Icons.css" rel="stylesheet" type="text/css" />
+  <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Cantarell:400|Droid+Serif' rel='stylesheet' type='text/css'>
+  <link href="https://fonts.googleapis.com/css?family=Slabo+27px" rel="stylesheet">
+  <link href="../CSS/Skin.css" rel="stylesheet" type="text/css" />
+  <script src="../Scripts/NavMenu.js" type="text/javascript"></script>
+  <script src="../Scripts/Documentation.js" type="text/javascript"></script>
+ <script src="../Scripts/clipboard.min.js"></script>
+  <link href="../CSS/DocumentationStyle.css" rel="stylesheet"/>
+  <link href="../CSS/CustomStyle1.css" rel="stylesheet"/>
+  <!-- Fonts -->
+
+  <link rel="stylesheet" href="https://azure.microsoft.com/en-us/asset/menucss/" />
+
+
+  <!-- Plugin CSS -->
+  <link href="../CSS/magnific-popup.css" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="../CSS/creative.min.css" rel="stylesheet">
+</head>
+
+<body>
+        <header>
+          <a id="NavMenuLink" href="../Pages/NavigationMenu.html"></a>
+        </header>
+
+      <section>
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6">
+              <h1>FrameCapture - Screen Capture and Video Recorder</h1>
+              <p class="ParagraphStyle2">Take screenshots at any resolution , record and save videos in your hard disc , and adjust Depth of Field settings of your camera to give a beautiful photographic touch to your snapshots and videos.</p>
+              <p>FrameCapture is a C++ based library which lets you take snapshot of your game viewport at desired resolution, and record your in-game screen. You can adjust your camera's depth of field settings to create beautiful photographic images. You also have an option to display your UI screen in your snapshot or video output. Enabling UI screen will capture entire game window and hence will also display contents which are not directly rendered by your game viewport. You also have an option of converting your game screen into texture and display as UMG image format, and load image files from your hard disc as texture.</p>
+             <a class="DocumentLink" href="https://www.unrealengine.com/marketplace/framecapture-screen-capture-and-video-recorder"  target="_blank" role="button">Get It Here</a>
+            </div>
+
+            <div class="col-md-4">
+              <!-- Cover image -->
+              <img alt="FrameCapture" style=" width: 150%; height:auto;" src="../Images/FrameCapture/CoverImage.png">
+            </div>
+          </div>
+          </div>
+            <div class="container" style="margin-top:40px;">
+
+            </div>
+      </section>
+
+      <section  class="text-center" style="margin-top:-100px;">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-12 text-center">
+              <h2 class="section-heading">Features</h2>
+              <hr class="my-4">
+            </div>
+          </div>
+        </div>
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-4 col-md-4 text-center">
+              <div class="service-box mt-5 mx-auto">
+                <img style=" width: 30%;" src="../Images/Icons/DOFAdjustIcon.png">
+                <h3 class="mb-3">DOF Adjustment</h3>
+                <p class=" text-muted mb-0" style="padding-top:10px;">Adjust Depth of Field Settings of your camera in real-time.</p>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-4 text-center">
+              <div class="service-box mt-5 mx-auto">
+                <img style=" width: 30%;" src="../Images/Icons/ScreenShotIcon.png">
+                <h3 class="mb-3">Screenshot Capture</h3>
+                <p class="text-muted mb-0" style="padding-top:10px;">Take Screenshots at desired resolution.</p>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-4 text-center">
+              <div class="service-box mt-5 mx-auto">
+                <img style=" width: 30%;" src="../Images/Icons/VideoRecorderIcon.png">
+                <h3 class="mb-3">Video Recorder</h3>
+                <p class="text-muted mb-0" style="padding-top:0px;">Record and save in game video at desired framerate per second, with an option to record entire window, with UI elements</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+        <section style="margin-top:-100px;">
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-12 text-center">
+                <h2 class="section-heading">Getting Started</h2>
+                <hr class="my-4">
+              </div>
+            </div>
+          </div>
+          <div class="container">
+            <div >
+              <p class = "TextStyle1">Although the base functionalities are written in C++ , to help you get started using this plugin, I have set up in depth example that is going to help you understand how this system is working, and how to implement this
+              in your project.</p>
+                <p class = "TextStyle1">You might be familiar with editor command that helps you take high res screenshot of your game at any point of time. To implement similar but customized feature, I had to create a seperate Viewport Client that is inherited from
+                <span class="FunctionName1">UGameViewportClient</span>. My class is called <span class="FunctionName1">UFrameCaptureViewportClient</span>. So before you start implementing my plugin in your project, you need to add my viewport client class as your game viewport client.</p>
+            </div>
+            <div>
+              <p class = "TextStyle1">Go to <strong>Edit -> Project Settings</strong>, and navigate to <strong>Engine -> General Settings</strong>. Then update your Game Viewport Client Class with <span class="FunctionName1">FrameCaptureViewportClient</span>.</p>
+                <div>
+                      <img style=" width: 100%;" src="../Images/FrameCapture/ViewportClient.png" alt="ViewportClient">
+                </div>
+            </div>
+          </div>
+      </section>
+
+      <section style="margin-top:-100px;">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-12 text-center">
+              <h2 class="section-heading">Adjusting DOF</h2>
+              <hr class="my-4">
+            </div>
+          </div>
+        </div>
+        <div class="container">
+          <div>
+              <p class = "TextStyle1">The Post Process Depth of Field values can be adjusted for your current camera in order to create beautiful photographic views of your game viewport. I have exposed the post process DOF settings for the given camera component, and
+              the settings are divided as <strong>Bokeh</strong> , <strong>Gaussian</strong> and <strong>Circular</strong> DOF.</p>
+              <img style=" width: 100%;" src="../Images/FrameCapture/DOFExampleBokeh.png" alt="DOFExampleBokeh">
+               <p class = "TextStyle1">Bokeh DOF mode of your camera component can be adjusted anytime by calling the function <span class="FunctionName1">UpdateDOFBokeh</span> and passing the necessary parameters.</p>
+              <div class = "FunctionsTable">
+                <table class="table table-bordered">
+                  <thead>
+                    <tr>
+                    <th style="text-align:center;">Inputs</th>
+                    <th style="text-align:center;">Description</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                    <td>Scale</td>
+                      <td>The Depth of Field Scale.</td>
+                  </tr>
+                    <tr>
+                    <td>Near Transition</td>
+                      <td>Width of the transition region on the near side with respect to the focal region.</td>
+                  </tr>
+                    <tr>
+                      <td>Far Transition</td>
+                      <td>Width of the transition region on the far side with respect to the focal region.</td>
+                    </tr>
+                    <tr>
+                      <td>Focal Region</td>
+                      <td>Region after focal distance, along which the objects are in focus.</td>
+                    </tr>
+                    <tr>
+                      <td>Focal Distance</td>
+                      <td>Distance at which the Depth of field value should be sharp, relative to the target hit by camera linetrace.</td>
+                    </tr>
+                    <tr>
+                      <td>Max Bokeh Size</td>
+                      <td>Maximum size of the Depth of Field blur.</td>
+                    </tr>
+                    <tr>
+                      <td>Camera Component</td>
+                      <td>The Camera Component for which to update the depth of field settings.</td>
+                    </tr>
+                    <tr>
+                      <td>EndDistance</td>
+                      <td>Maximum distance the line trace should target at, to find a valid object and adjust the focal length accordingly.</td>
+                    </tr>
+                 </tbody>
+                </table>
+              </div>
+              <img style=" width: 100%;" src="../Images/FrameCapture/DOFExampleGaussian.png" alt="DOFExampleGaussian">
+               <p class = "TextStyle1">Gaussian DOF mode of your camera component can be adjusted anytime by calling the function <span class="FunctionName1">UpdateDOFGaussian</span> and passing the necessary parameters.</p>
+              <div class = "FunctionsTable">
+                <table class="table table-bordered">
+                  <thead>
+                    <tr>
+                    <th style="text-align:center;">Inputs</th>
+                    <th style="text-align:center;">Description</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                  <tr>
+                    <td>Near Transition</td>
+                      <td>Width of the transition region on the near side with respect to the focal region.</td>
+                  </tr>
+                    <tr>
+                      <td>Far Transition</td>
+                      <td>Width of the transition region on the far side with respect to the focal region.</td>
+                    </tr>
+                    <tr>
+                      <td>Focal Region</td>
+                      <td>Region after focal distance, along which the objects are in focus.</td>
+                    </tr>
+                    <tr>
+                      <td>Focal Distance</td>
+                      <td>Distance at which the Depth of field value should be sharp, relative to the target hit by camera linetrace.</td>
+                    </tr>
+                    <tr>
+                      <td>Near Blur Size</td>
+                      <td>Maximum size of the Depth of Field blur in the near transition region.</td>
+                    </tr>
+                    <tr>
+                      <td>Far Blur Size</td>
+                      <td>Maximum size of the Depth of Field blur in the  far transition region.</td>
+                    </tr>
+                    <tr>
+                      <td>Camera Component</td>
+                      <td>The Camera Component for which to update the depth of field settings.</td>
+                    </tr>
+                    <tr>
+                      <td>EndDistance</td>
+                      <td>Maximum distance the line trace should target at, to find a valid object and adjust the focal length accordingly.</td>
+                    </tr>
+                 </tbody>
+                </table>
+              </div>
+              <img style=" width: 100%;" src="../Images/FrameCapture/DOFExampleCircular.png" alt="DOFExampleCircular">
+               <p class = "TextStyle1">Circular DOF mode of your camera component can be adjusted anytime by calling the function <span class="FunctionName1">UpdateDOFCircular</span> and passing the necessary parameters.</p>
+              <div class = "FunctionsTable">
+                <table class="table table-bordered">
+                  <thead>
+                    <tr>
+                    <th style="text-align:center;">Inputs</th>
+                    <th style="text-align:center;">Description</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Focal Distance</td>
+                      <td>Distance at which the Depth of field value should be sharp, relative to the target hit by camera linetrace.</td>
+                    </tr>
+                    <tr>
+                      <td>Aperture FStop</td>
+                      <td>Ratio between the focal length and the aperture diameter. Higher numbers reduce the Depth of field effect.</td>
+                    </tr>
+                    <tr>
+                      <td>Camera Component</td>
+                      <td>The Camera Component for which to update the depth of field settings.</td>
+                    </tr>
+                 </tbody>
+                </table>
+              </div>
+          </div>
+        </div>
+      </section>
+
+      <section style="margin-top:-100px;">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-12 text-center">
+              <h2 class="section-heading">Taking Screenshots</h2>
+              <hr class="my-4">
+            </div>
+          </div>
+        </div>
+        <div class="container">
+          <p class = "TextStyle1">You can take screenshots at any resolution and save to your hard disc. You have an option to use your viewport resolution, or take highres screenshot at custom resolution. You can also Show UI elements in your screenshots. I have used OpenCV
+            library to capture entire window, so if you are showing UI elements, you need to play in a seperate standalone window, not in your viewport, and you cannot take highres screenshots in this case.</p>
+            <img style=" width: 100%;" src="../Images/FrameCapture/TakingScreenShotCover.png" alt="TakingScreenShotCover">
+            <p class = "TextStyle1">Taking Screenshot is not an instant process and there may be a noticeable time difference between the frame at which the screenshot is requested and the frame at which the screencapture is finished, specially when you have requested a screen capture at
+            a high resolution (4K and above). To facilitate the process, I have created an actor called <span class="FunctionName1">AFrameCaptureActor</span>, which is responsible for requesting for screen capture and broadcast notification once the screen capture is finished.
+            You can either choose to save the screenshot in hard disc or display the result as texture in viewport UI. This actor also records videos, and we will see how in the next section.</p>
+            <img style=" width: 100%;" src="../Images/FrameCapture/FrameCaptureActor.png" alt="FrameCaptureActor">
+            <p class = "TextStyle3">Spawning the FrameCapture Actor</p>
+            <p class = "TextStyle1">Before you can request your viewport client for a screen capture, you need to spawn an instance of <span class="FunctionName1">AFrameCaptureActor</span> class. I have created a widget and I am spawning this actor in the Construct event, and saving the spawned actor in a
+            variable for later use.</p>
+            <img style=" width: 100%;" src="../Images/FrameCapture/SpawnFrameCaptureActor.png" alt="SpawnFrameCaptureActor">
+            <p class = "TextStyle3">Requesting a new Screen Capture</p>
+            <p class = "TextStyle1">Once you have a valid spawned FrameCapture actor, you are allowed to request for a new screen capture. For initializing a new screen capture, you need to get a reference of your spawned FrameCapture actor, and call the function <span class="FunctionName1">InitializeScreenCapture</span>.</p>
+            <img style=" width: 100%;" src="../Images/FrameCapture/InitializeScreenCapture1.png" alt="InitializeScreenCapture">
+
+
+          <div class = "FunctionsTable">
+            <table class="table table-bordered">
+              <thead>
+                <tr>
+                <th style="text-align:center;">Inputs</th>
+                <th style="text-align:center;">Description</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Target</td>
+                  <td>The Spawned FrameCapture Actor reference.</td>
+                </tr>
+                <tr>
+                  <td>Resolution X</td>
+                  <td>Width of the Screenshot. This parameter is not relevant if the user chooses to use viewport resolution.</td>
+                </tr>
+                <tr>
+                  <td>Resolution Y</td>
+                  <td>Height of the Screenshot. This parameter is not relevant if the user chooses to use viewport resolution.</td>
+                </tr>
+                <tr>
+                  <td>Use Viewport res</td>
+                  <td>Whether to use Viewport resolution as the Screenshot resolution.</td>
+                </tr>
+                <tr>
+                  <td>FileName</td>
+                  <td>The file name along with path, where the user wishes to save the Screenshot. Not relevant if the user does not wish to save the Screenshot in hard disc.</td>
+                </tr>
+                <tr>
+                  <td>Save to Disc</td>
+                  <td>If the user wants to save the Screenshot to the hard disc. You can keep this unchecked if you want to read the captured data as byte array instead and convert into UTexture2D.</td>
+                </tr>
+             </tbody>
+            </table>
+          </div>
+          <p class = "TextStyle3">Binding the ScreenshotSaved Event</p>
+          <p class = "TextStyle1">Since capturing screenshot is not an instant process and happens asynchronously, you have to bind the <span class="FunctionName1">OnScreenshotSaved</span> event of your FrameCapture actor to get notified to when the screenshot is saved.</p>
+            <img style=" width: 100%;" src="../Images/FrameCapture/OnScreenshotSaved.png" alt="OnScreenshotSaved">
+        </div>
+      </section>
+
+      <section style="margin-top:-100px;">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-12 text-center">
+              <h2 class="section-heading">Taking Screenshots with UI</h2>
+              <hr class="my-4">
+            </div>
+          </div>
+        </div>
+        <div class="container">
+        <p class = "TextStyle1">To take Screenshots with your UI elements visible, you don't need the FramCapture actor, you just need to call the function <span class="FunctionName1">TakeSnapshotwithUI</span> and specify the filename where you want to save the file.</p>
+        <img style=" width: 100%;" src="../Images/FrameCapture/TakingScreenShotWithUI.png" alt="TakingScreenShotWithUI">
+       </div>
+        </section>
+
+        <section style="margin-top:-100px;">
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-12 text-center">
+                <h2 class="section-heading">Saving Screenshots as Textures</h2>
+                <hr class="my-4">
+              </div>
+            </div>
+          </div>
+          <div class="container">
+            <p class = "TextStyle1">Instead of saving screenshots to the hard disc, you can also save your screenshot as textures and display as your UMG elements. Here also you have an option to display your UI elements.</p>
+            <p class = "TextStyle3">Initializing a new Screen Capture</p>
+            <p class = "TextStyle1">Assuming you already have a spawned a new instance of FrameCapture actor, here also at first you need to initialize a new screen capture by calling the function <span class="FunctionName1">InitializeScreenCapture</span>.
+            But here you don't have to specify any filename and don't check the <strong>SaveToDisk</strong> option</p>
+            <img style=" width: 100%;" src="../Images/FrameCapture/InitializeScreenCapture2.png" alt="InitializeScreenCapture">
+            <p class = "TextStyle3">Binding the ScreenCaptured Event</p>
+            <p class = "TextStyle1">Once the screen capture is initialized, you need to bind the <span class="FunctionName1">OnScreenCaptured</span> event of your FrameCapture actor to get notified once the screen is successfully captured.
+            This event will return texture format as output converted from the current viewport pixels. You can then use the texture (UTexture2D) to display in yuor UI.</p>
+              <img style=" width: 100%;" src="../Images/FrameCapture/OnScreenCaptured.png" alt="OnScreenCaptured">
+         </div>
+          </section>
+
+          <section style="margin-top:-100px;">
+            <div class="container">
+              <div class="row">
+                <div class="col-lg-12 text-center">
+                  <h2 class="section-heading">Loading Image Files</h2>
+                  <hr class="my-4">
+                </div>
+              </div>
+            </div>
+            <div class="container">
+              <p class = "TextStyle1">You can load image files from hard disc and display as texture in your UI. This is a very useful features for instances like displaying thumbnails for saved game files, or loading and displaying avatars for MMORPG games.</p>
+              <p class = "TextStyle1">To load an image file from your hard disc, you need to call the function <span class="FunctionName1">LoadTexturefromPath</span> and specify the full filename of the image file to be loaded.</p>
+                <img style=" width: 100%;" src="../Images/FrameCapture/LoadingScreenshots.png" alt="LoadingScreenshots">
+           </div>
+            </section>
+
+      <section style="margin-top:-100px;">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-12 text-center">
+              <h2 class="section-heading">Recording Videos</h2>
+              <hr class="my-4">
+            </div>
+          </div>
+        </div>
+        <div class="container">
+          <p class = "TextStyle1">You can record video at desired frame rate and save to your hard disc. Video recording is done at viewport resolution only. You also have an option to show your UI elements in the recorded video.
+          The actor <span class="FunctionName1">AFrameCaptureActor</span>, is responsible for recording new videos as well.</p>
+            <img style=" width: 100%;" src="../Images/FrameCapture/RecordingVideosCover.png" alt="RecordingVideosCover">
+            <p class = "TextStyle3">Spawning the FrameCapture Actor</p>
+            <p class = "TextStyle1">Before you can request your viewport client for a new video record, you need to spawn an instance of <span class="FunctionName1">AFrameCaptureActor</span> class. You can spawn it wherever you like, in your widget class or
+              maybe in your character class like what I am doing here, and save the spawned actor in a variable.</p>
+            <img style=" width: 100%;" src="../Images/FrameCapture/InitializeVideoCapture.png" alt="InitializeVideoCapture">
+            <p class = "TextStyle3">Initializing the Recorder</p>
+            <p class = "TextStyle1">Once you have a valid spawned FrameCapture actor, you can now start recording your video sequence. For initializing recording of a new sequence , you need to get a reference of your spawned FrameCapture actor, and call the function.
+            <span class="FunctionName1">InitializeRecorder</span>. Video is always recorded at your viewport's resolution.</p>
+            <img style=" width: 100%;" src="../Images/FrameCapture/InitializeRecorder.png" alt="InitializeRecorder">
+          <div class = "FunctionsTable">
+            <table class="table table-bordered">
+              <thead>
+                <tr>
+                <th style="text-align:center;">Inputs</th>
+                <th style="text-align:center;">Description</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Target</td>
+                  <td>The Spawned FrameCapture Actor reference.</td>
+                </tr>
+                <tr>
+                  <td>FPS</td>
+                  <td>The FrameRate per second that you want your target video to be recorded at.</td>
+                </tr>
+                <tr>
+                  <td>Show UI</td>
+                  <td>Whether to show UI elements in the output video.</td>
+                </tr>
+                <tr>
+                  <td>FileName</td>
+                  <td>The file name along with path, where the user wishes to save the video.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p class = "TextStyle3">Pause the Resume Recording</p>
+          <p class = "TextStyle1">You can pause and resume recording anytime adter the video recording is initialized, by get a reference of your spawned FrameCapture actor and calling the function <span class="FunctionName1">TogglePauseRecorder</span>.</p>
+            <img style=" width: 100%;" src="../Images/FrameCapture/TogglePauseRecorder.jpg" alt="TogglePauseRecorder">
+          <p class = "TextStyle3">Stop Recording</p>
+          <p class = "TextStyle1">To stop recording,  get your FrameCapture actor and call the function <span class="FunctionName1">StopRecorder</span>. This must be done in order to release the video file that was currently being written.</p>
+          <img style=" width: 100%;" src="../Images/FrameCapture/StopRecorder.jpg" alt="StopRecorder">
+        </div>
+      </section>
+
+      <section style="margin-top:-100px;">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-12 text-center">
+              <h2 class="section-heading">The End</h2>
+              <hr class="my-4">
+            </div>
+          </div>
+        </div>
+        <div class="container">
+          <p class = "TextStyle1">Thank you for your time. I hope you find this plugin useful. For technical difficulties, feedback, suggestions, queries, kindly drop me a mail at <i><strong>sameek4@gmail.com</strong></i>. I would love to hear from you.</p>
+       </div>
+        </section>
+          <!-- Optional JavaScript -->
+          <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+          <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+          <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+          <script src=",,/Scripts/Documentation.js"></script>
+        </body>
+        </html>

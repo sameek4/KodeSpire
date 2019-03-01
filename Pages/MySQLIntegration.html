@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <title>MYSQL Integration</title>
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+  integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="../CSS/MainStyle.css">
+  <link href="../CSS/NavMenuStyle.css" rel="stylesheet" type="text/css" />
+  <link href="../CSS/Icons.css" rel="stylesheet" type="text/css" />
+  <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Cantarell:400|Droid+Serif' rel='stylesheet' type='text/css'>
+  <link href="https://fonts.googleapis.com/css?family=Slabo+27px" rel="stylesheet">
+  <link href="../CSS/Skin.css" rel="stylesheet" type="text/css" />
+  <script src="../Scripts/NavMenu.js" type="text/javascript"></script>
+  <script src="../Scripts/Documentation.js" type="text/javascript"></script>
+ <script src="../Scripts/clipboard.min.js"></script>
+  <link href="../CSS/DocumentationStyle.css" rel="stylesheet"/>
+  <link href="../CSS/CustomStyle1.css" rel="stylesheet"/>
+  <!-- Fonts -->
+
+  <link rel="stylesheet" href="https://azure.microsoft.com/en-us/asset/menucss/" />
+
+
+  <!-- Plugin CSS -->
+  <link href="../CSS/magnific-popup.css" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="../CSS/creative.min.css" rel="stylesheet">
+</head>
+
+<body>
+        <header>
+          <a id="NavMenuLink" href="../Pages/NavigationMenu.html"></a>
+        </header>
+
+      <section>
+        <div class="container">
+          <div class="row">
+            <div class="col-md-10">
+              <h1>MySQL Integration for UE4</h1>
+              <p class="ParagraphStyle2">MySQL Integration is a plugin that lets you connect your UE4 project to your MySQL server, and store and retrieve data from the server via SQL queries, directly from the Blueprint. This plugin brings the power of C#.NET in Unreal Engine 4.</p>
+              <p>If you have worked with SQL, you must be very familiar to Select, Update, Insert and Delete SQL queries, joins and sub-queries. If you know C#.Net, and worked with ADO.Net, you must be knowing how to set Connection properties for your Server,
+                and how to write and execute your SQL Queries within your .NET applications.</p>
+                <p>But now you can use Blueprints in Unreal Engine 4 to do your job. You are still writing the same queries that you are familiar with, but here you are writing it within Blueprints,
+                   which gives you flexibility to store and retrieve data as well as Images from your MySQL Server to your UE4 projects.</p>
+             <a class="DocumentLink" href="https://www.unrealengine.com/marketplace/mysql-integration"  target="_blank" role="button">Get It Here</a>
+          </div>
+          </div>
+
+          </div>
+        </section>
+
+       <!-- <section  style="margin-top:-150px;">
+        <div class="container">
+          <div class="row">
+          <div class="col-md-10">
+        <iframe width="1024" height="512" src="https://www.youtube.com/embed/llxjWwl_u6U?ecver=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+          </div>
+        </div>
+          </div>
+      </section> -->
+
+      <section  class="text-center" style="margin-top:-150px;">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-12 text-center">
+              <h2 class="section-heading">Features</h2>
+              <hr class="my-4">
+            </div>
+          </div>
+        </div>
+        <div class="container">
+          <div class="row">
+          <div class="col-lg-4 col-md-4 text-center">
+              <div class="service-box mt-5 mx-auto">
+                <img style=" width: 30%;" src="../Images/Icons/AsyncIcon.png">
+                <h3 class="mb-3">Asynchronous Connection</h3>
+                <p class=" text-muted mb-0">Asynchronously connect your Server via MySQL Server Authentication System.</p>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-4 text-center">
+              <div class="service-box mt-5 mx-auto">
+                <img style=" width: 30%;" src="../Images/Icons/QueryIcon.png">
+                <h3 class="mb-3">Easy Query Formation</h3>
+                <p class="text-muted mb-0" style="padding-top:10px;">Form your own query and pass as string input , directly within your Blueprint or C++ class.</p>
+              </div>
+            </div>
+          <div class="col-lg-4 col-md-4 text-center">
+              <div class="service-box mt-5 mx-auto">
+                <img style=" width: 30%;" src="../Images/Icons/ConnectionStringIcon.png">
+                <h3 class="mb-3">Custom ConnectionString</h3>
+                <p class="text-muted mb-0">Create custom connection string format with different protocols and other connection parameters, as required by your server.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section  class="text-center" style="margin-top:-150px;">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-12 text-center">
+              <h2 class="section-heading">Getting Started</h2>
+              <hr class="my-4">
+            </div>
+          </div>
+        </div>
+        <div class="container">
+          <div>
+                <p class = "TextStyle1">To get started, create a C++ based project, download the plugin from the marketplace, and ensure that the plugin is installed, by visiting the Plugin Window, as shown below:</p>
+          </div>
+          <div>
+                <img style=" width: 100%;" src="../Images/MySQL/MySQLPluginWindow.png" alt="MySQLPluginWindow">
+          </div>
+          <div>
+                <p class = "TextStyle1">If you are unsure regarding how to work with MySQL, you can visit this link to get yourself started with MySQL.
+                <a href="https://dev.mysql.com/doc/mysql-getting-started/en/"  target="_blank">https://dev.mysql.com/doc/mysql-getting-started/en/</a> </p>
+
+          </div><!--//row-->
+          </div><!--//container-->
+
+             <!--Setting Up Database Connection in UE4-->
+              <div class="container">
+                <div >
+                  <h4 class="SubHeader1">Setting Up Database Connection in UE4</h4>
+                  <p class = "TextStyle1">Before we begin writing our SQL queries and executing them in our database, we first need to set up a connection within UE4. This is similar to how we
+                    manually connect to our DB Server using Windows or MySQL Server Authentication.</p>
+                  <h4 class="SubHeader2">Authentication Modes</h4>
+                  <p class = "TextStyle1">To set up a DB Connection, we either need to use Windows Authentication mode or MySQL Authentication mode.</p>
+                  <ul>
+                    <li style="list-style:line-through;">  <p class = "TextStyle1">Windows Authentication mode authenticates users to use the Database server via Windows Login ID and Password. </p>
+                       <div class = "FunctionsTable">
+                         <table class="table table-bordered">
+                           <thead>
+                             <tr>
+                             <th style="text-align:center;">Function Name</th>
+                             <th style="text-align:center;">Description</th>
+                             </tr>
+                           </thead>
+                           <tbody>
+                             <tr>
+                             <td>Get Current User</td>
+                               <td>This function returns the current Windows User Name.</td>
+                           </tr>
+                             <tr>
+                             <td>Get Current Domain</td>
+                               <td>This function returns the current PC Domain.</td>
+                           </tr>
+                             <tr>
+                               <td>Authenticate User</td>
+                               <td>This function takes the current user name, domain and password for your Windows account as input and returns the authentication result as a Boolean variable. Please note that this function will not work if the current Windows user does not require any password to login. So you may want to avoid using this function unless absolutely necessary.</td>
+                             </tr>
+                          </tbody>
+                         </table>
+                       </div>
+                    </li>
+                    <li style="list-style:line-through;"><p class = "TextStyle1"> MySQL Authentication mode uses logins that are created and stored in MySQL Server and are not based on Windows user accounts.
+                      Here you need to explicitly enter both your MySQL Server ID and password, while setting up the connection property.
+                      To learn about Authentication modes in detail, you can refer here : <a href="https://dev.mysql.com/doc/refman/5.5/en/authentication-plugins.html"  target="_blank">https://dev.mysql.com/doc/refman/5.5/en/authentication-plugins.html</a> </p>
+                    </li>
+
+                  </ul>
+
+                    <h4 class="SubHeader2">MySQL Server Connection</h4>
+                    <p class = "TextStyle1">Connection to the MySQL Server happens asynchronously. To connect to your server, first you need to call the <i>Set Connection Properties</i> function,
+                      and then add a custom tick event that you need to listen to at every tick to validate the current status of your connection</p>
+                      <ul>
+                        <li style="list-style:line-through;">  <p class = "TextStyle1">The function <span class="FunctionName">Set Connection Properties</span> takes the necessary parameters that your server is going to need , and request for the connection to be established.</p>
+                           <div class = "FunctionsTable">
+                             <table class="table table-bordered">
+                               <thead>
+                                 <tr>
+                                 <th style="text-align:center;">Inputs</th>
+                                 <th style="text-align:center;">Description</th>
+                                 </tr>
+                               </thead>
+                               <tbody>
+                                 <tr>
+                                 <td>Server</td>
+                                   <td>This parameter takes your server address.</td>
+                               </tr>
+                                 <tr>
+                                 <td>DBName</td>
+                                   <td>This parameter takes the name of your database.</td>
+                               </tr>
+                                 <tr>
+                                   <td>UserID</td>
+                                   <td>This parameter takes your login ID.</td>
+                                 </tr>
+                                 <tr>
+                                   <td>Password</td>
+                                   <td>This parameter takes your login Password.</td>
+                                 </tr>
+                                 <tr>
+                                   <td>Extra Param</td>
+                                   <td>This parameter takes any extra setting that you might want to add. All individual settings should be seperated by  semicolon and passed as a single string.</td>
+                                 </tr>
+                                 <tr>
+                                   <td>Is Trusted</td>
+                                   <td>If you are using Windows Authentication Mode , you can check this, and you do not need to enter your User ID and password in that case. Otherwise, uncheck this paramter.</td>
+                                 </tr>
+                              </tbody>
+                             </table>
+                           </div>
+                           <p><img style="width: 95%;" src="../Images/DocumentationImages/SetConnectionProperties.jpg" alt="SetConnectionProperties"></img></p>
+                           <p class = "TextStyle1">A connection string typically looks like:</p>
+                           <p class = "TextStyle2">Server=myServerAddress;Database=myDataBase;User Id=myUsername;Password=myPassword;</p>
+
+
+                             <p class = "TextStyle1">So if your connectionstring consists of extra parameters , apart from the usual parameters included in the Set Connection Properties function(Server , DBName , UserID , Password , IsTrusted) ,
+                                you can enter those extra parameters in the <strong>Extra Param</strong> input, seperated by a semicolon. For example , if your connectionstring is something like : </p>
+                              <p class = "TextStyle2">Server=myServerAddress;Database=myDataBase;Uid=myUsername;Pwd=myPassword;Protocol=pipe;PipeName=mypipename;</p>
+                              <p class = "TextStyle1">Then you need to enter , in your <strong>Extra Param</strong> input :</p>
+                              <p class = "TextStyle2">Protocol=pipe;PipeName=mypipename;</p>
+                              <p class = "TextStyle1">It must be noted here that you can obviously enter the extra parameters in other inputs as well, like in your <strong>Server</strong> input , you can also write like this : </p>
+                              <p class = "TextStyle2">myServerAddress;Protocol=pipe;PipeName=mypipename;</p>
+                              <p class = "TextStyle1">But it is recommended to use <strong>Extra Param</strong> input for this purpose, just to avoid confusion.</p>
+                              <p class = "TextStyle1">To learn about various types of Connection String and forming the one that best suits your requirement, you can refer here : <a href="https://www.connectionstrings.com/mysql/"  target="_blank">https://www.connectionstrings.com/mysql/</a>  </p>
+                        </li>
+                        <li style="list-style:line-through;"><p class = "TextStyle1"> Once your connection has been established, you need to periodically listen to the function <span class="FunctionName">Check Connection State</span> to find out the current state of your connection.
+                        An useful way to do that in Blueprints is using Gates, which is called in Tick function , but is opened after <span class="FunctionName">Set Connection Properties</span> is called.</p>
+                          <p><img style="width: 95%;" src="../Images/MySQL/MySQLCheckConnectionState.jpg" alt="MySQLCheckConnectionState"></img></p>
+                        <div class = "FunctionsTable">
+                          <table class="table table-bordered">
+                            <thead>
+                              <tr>
+                              <th style="text-align:center;">Connection State</th>
+                              <th style="text-align:center;">Description</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                              <td>Broken</td>
+                                <td>The connection to the data source is broken.</td>
+                            </tr>
+                              <tr>
+                              <td>Closed</td>
+                                <td>The connection is closed.</td>
+                            </tr>
+                              <tr>
+                                <td>Connecting</td>
+                                <td>The connection object is connecting to the data source.</td>
+                              </tr>
+                              <tr>
+                                <td>Executing</td>
+                                <td>The connection object is executing a command.</td>
+                              </tr>
+                              <tr>
+                                <td>Fetching</td>
+                                <td>The connection object is retrieving data.</td>
+                              </tr>
+                              <tr>
+                                <td>Open</td>
+                                <td>The connection is open.</td>
+                              </tr>
+                           </tbody>
+                          </table>
+                        </div>
+
+                        <p class = "TextStyle1">As long as the current state shows <strong>Connecting</strong>, you can execute other operations, and let the connection happen in the background. When you get current state as <strong>Open</strong>, this means connection is successfully established ,
+                        and now you can proceed with executing queries in your database.</p>
+                        </li>
+
+                      </ul>
+                </div><!--//row-->
+                 <!--Writing SQL queries within UE4 Blueprints-->
+                 <div class="container">
+                   <div >
+                     <h4 class="SubHeader1">Writing SQL queries within UE4 Blueprints</h4>
+                     <p class = "TextStyle1"> Once the connection property has been set, you can now start forming your SQL queries. Forming queries can be categorized in two types, queries that update data to the database (INSERT, UPDATE, DELETE),
+                       or the queries that fetch data from the database (SELECT). We will discuss these two categories one by one.  </p>
+                    <h4 class="SubHeader2">Update Queries</h4>
+                    <ul>
+                    <li style="list-style:line-through;">
+                        <p class = "TextStyle1"> To asynchronously modify data in our table , we will use the function <span class="FunctionName">Update data from Query Async</span>.</p>
+                        <p><img style=" width: 100%;" src="../Images/MySQL/MySQLUpdateQueryAsync.jpg" alt="MySQLUpdateQueryAsync"></p>
+                    </li>
+                    <li style="list-style:line-through;">
+                      <p class = "TextStyle1">After calling the Update function , you need to periodically listen to the function <span class="FunctionName">Check Query Execution State</span> to find out the current state of your function.
+                      Here also you can use Gate within the Tick function, which should be opened after <span class="FunctionName">Update data from Query Async</span> is called.</p>
+                        <p><img style=" width: 100%;" src="../Images/MySQL/MySQLUpdateQueryExecution.jpg" alt="MySQLUpdateQueryExecution"></p>
+                        <div class = "FunctionsTable">
+                          <table class="table table-bordered">
+                            <thead>
+                              <tr>
+                              <th style="text-align:center;">Query Execution State</th>
+                              <th style="text-align:center;">Description</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                              <td>Executing</td>
+                                <td>The query is still being executed.</td>
+                            </tr>
+                              <tr>
+                              <td>Success</td>
+                                <td>The query has been successfully executed.</td>
+                            </tr>
+                              <tr>
+                                <td>Failed</td>
+                                <td>The query execution has failed. This generates error message as string output in the <i>Check Query Execution State</i> function.</td>
+                              </tr>
+
+                           </tbody>
+                          </table>
+                        </div>
+                    </li>
+                  </ul>
+                        <p class = "TextStyle1"> If you would like to update data synchronously, you can call the function <span class="FunctionName">Update data from Query</span> which takes a string input where we have to enter our query and executes the query in the database. </p>
+                          <p><img style=" width: 100%;" src="../Images/MySQL/MySQLUpdateQuery.jpg" alt="MySQLUpdateQuery"></p>
+                      <p class = "TextStyle1"><h4 class="SubHeader2">Select Queries</h4></p>
+
+                      <ul>
+                      <li style="list-style:line-through;"><p class = "TextStyle1">
+                        To select data asynchronously, you need to first call the function <span class="FunctionName">Select Data from Query Async</span> which takes a string input where we have to enter our query and fetches the result from the database. </p>
+                        <p><img style=" width: 100%;" src="../Images/MySQL/MySQLSelectQueryAsync.jpg" alt="MySQLSelectQueryAsync">
+                      </li>
+
+                      <li style="list-style:line-through;"><p class = "TextStyle1"> Once you called <span class="FunctionName">Select Data from Query Async</span>, you need to periodically listen to the
+                        function <span class="FunctionName">Check Query Execution State</span> to find out the current state of your query execution.</p>
+                    </li>
+                    <li style="list-style:line-through;"><p class = "TextStyle1"> To select the data once the query execution is successful, call the function <span class="FunctionName">Get Selected Table</span>.</p>
+                      <p><img style=" width: 100%;" src="../Images/MySQL/MySQLSelectQueryAsync1.jpg" alt="MySQLSelectQueryAsync1"></p>
+                      <div class = "FunctionsTable">
+                        <table class="table table-bordered">
+                          <thead>
+                            <tr>
+                            <th style="text-align:center;">Output Name</th>
+                            <th style="text-align:center;">Description</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                            <td>Result By Column</td>
+                              <td><p class = "TextStyle1">This will return an array of structured variable called <strong>MySQLDataTable</strong>. This represents a column in the table and contains two properties,
+                                <strong>ColumnName</strong> and <strong>ColumnData</strong>.</p>
+                                  <p> <span class="FunctionName">ColumnName</span></p>
+                                  <p class = "TextStyle1">ColumnName contains the header name of the column of the current instance of our initial array that we get by executing our select query.
+                                    If you want to display data of a specific column, you can use this variable to match the column name.</p>
+                                  <p> <span class="FunctionName">ColumnData</span></p>
+                                  <p class = "TextStyle1">ColumnData is an array of string consisting of all the elements of a given column. So you can easily set up a
+                                    for-loop here to get all the elements of a particular column iteratively.</p>
+                              </td>
+                          </tr>
+                            <tr>
+                            <td>Result By Row</td>
+                              <td><p class = "TextStyle1">This contains an array of structured variable called <strong>MySQLDataRow</strong>. This structure contains an array of string that represents values of an entire row.
+                                So the number of elements in this string array equals number of columns, and number of elements in the Result by Row array equals number of rows in the output of the Select query.
+                              </p></td>
+                          </tr>
+                         </tbody>
+                        </table>
+                      </div>
+                </li>
+                    </ul>
+                    <p class = "TextStyle1">Below images display an example of how we can use <strong>Result By Row</strong> and <strong>Result By Column</strong> structures to store and display selected data retrieved from the server to our UE4 UI, as part of UMG widget.</p>
+                      <p><img style=" width: 100%;" src="../Images/MySQL/ResultByColumnExample.jpg" alt="ResultByColumnExample"></p>
+                        <p><img style=" width: 100%;" src="../Images/MySQL/ResultByRowExample.jpg" alt="ResultByRowExample"></p>
+                        <p class = "TextStyle1"> If you would like to select data synchronously, you can call the function <span class="FunctionName">Select data from Query</span> which takes a string input where we have to enter our query ,
+                           executes the query in the database. and returns the selected data as <strong>Result By Column</strong> and <strong>Result By Row</strong> format.</p>
+                          <p><img style=" width: 100%;" src="../Images/MySQL/SelectDatafromQuery.jpg" alt="SelectDatafromQuery"></p>
+                   </div><!--//row-->
+                 </div>
+               </div>
+
+      </section>
+      <section id = "End" style="margin-top:-100px;">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-12 text-center">
+              <h2 class="section-heading">The End</h2>
+              <hr class="my-4">
+            </div>
+          </div>
+        </div>
+        <div class="container">
+          <p class = "TextStyle1">Thank you for your time. I hope you find this plugin useful. For technical difficulties, feedback, suggestions, queries, kindly drop me a mail at <i><strong>sameek4@gmail.com</strong></i>. I would love to hear from you.</p>
+       </div>
+     </section>
+          <!-- Optional JavaScript -->
+          <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+          <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+          <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+          <script src=",,/Scripts/Documentation.js"></script>
+        </body>
+        </html>
