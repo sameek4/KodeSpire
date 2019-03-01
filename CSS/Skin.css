@@ -1,0 +1,114 @@
+@charset "UTF-8";
+/* Responsive */
+/* sideNav */
+
+
+/* Code Prettify Sunburst */
+/* Pretty printing styles. Used with prettify.js. */
+/* Vim sunburst theme by David Leibovic */
+pre.prettyprint {
+    border: 1px solid #D0D8E8 !important;
+    padding: 10px !important;
+    border-radius: 0 !important;
+    font-size: 14px !important;
+}
+
+/* SPAN elements with the classes below are added by prettyprint. */
+.pln { color: #006 !important }  /* plain text */
+
+@media screen {
+    .str { color: #800 !important }  /* string content */
+    .kwd { color: #00A !important; font-weight:bold !important; }  /* a keyword */
+    .com { color: #080 !important }  /* a comment */
+    .typ { color: #00A !important }  /* a type name */
+    .lit { color: #00F !important }  /* a literal value */
+    /* punctuation, lisp open bracket, lisp close bracket */
+    .pun, .opn, .clo { color: #006 !important }
+    .tag { color: #008 !important; font-weight:bold !important; }  /* a markup tag name */
+    .atn { color: #00A !important }  /* a markup attribute name */
+    .atv { color: #080 !important }  /* a markup attribute value */
+    .dec, .var { color: #00A !important }  /* a declaration; a variable name */
+    .fun { color: #800 !important; font-weight:bold !important; }  /* a function name */
+}
+
+/* Use higher contrast and text-weight for printable form. */
+@media print, projection {
+    .str { color: #060 !important }
+    .kwd { color: #006 !important; font-weight: bold !important; }
+    .com { color: #600 !important; font-style: italic !important; }
+    .typ { color: #404 !important; font-weight: bold !important; }
+    .lit { color: #044 !important; }
+    .pun, .opn, .clo { color: #440 !important; }
+    .tag { color: #006 !important; font-weight: bold !important; }
+    .atn { color: #404 !important; }
+    .atv { color: #060 !important; }
+}
+
+
+/* ATLAS-471 */
+code {
+    font-family: monospace !important;
+    color: rgb(51, 51, 51) !important;
+    font-size: 1em !important;
+    margin: 4px;
+    white-space:pre-line;
+}
+
+/**************************
+   Colors
+**************************/
+
+#PURPLE, .purple {
+    color: #800080;
+    display:inline-block;
+}
+
+#YELLOW, .yellow {
+    color: #ffff00;
+    display:inline-block;
+}
+
+#ORANGE, .orange {
+    color: #ff6600;
+    display:inline;
+}
+
+#RED, .red {
+    color: #ff0000;
+    display:inline;
+}
+
+#PINK, .pink {
+    color: #ff00ff;
+    display:inline;
+}
+
+#TEAL, .teal {
+    color: #008080;
+    display:inline;
+}
+
+#NAVY, .navy {
+    color: #000080;
+    display:inline;
+}
+
+#BLUE, .blue {
+    color: #0000ff;
+    display:inline;
+}
+
+#AQUA, .aqua {
+    color: #00ffff;
+    display:inline;
+}
+
+#LIME, .lime {
+    color: #00ff00;
+    display:inline;
+}
+
+#GREEN, .green {
+    color: #008000;
+    display:inline;
+}

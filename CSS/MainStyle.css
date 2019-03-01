@@ -1,0 +1,96 @@
+
+
+#img.source-image {
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+body
+{
+
+}
+
+.Default-Cursor
+{
+  cursor: default;
+}
+@media (min-width: 601px) {
+  .MainDiv
+  {
+    /* background: url(../Images/MainScreen.jpg) , url(../Images/BGGradient.jpg); */
+  text-align: center;
+    }
+
+  .navbar-default .navbar-nav > li.dropdown:hover > a,
+  .navbar-default .navbar-nav > li.dropdown:hover > a:hover,
+  .navbar-default .navbar-nav > li.dropdown:hover > a:focus {
+      background-color: rgb(231, 231, 231);
+      color: rgb(85, 85, 85);
+  }
+  li.dropdown:hover > .dropdown-menu {
+      display: block;
+  }
+
+}
+
+@media (max-width: 600px) {
+  .MainDiv {
+  /* background: url(../Images/MainScreen_Mobile.jpg) , url(../Images/BGGradient.jpg); */
+  background-repeat: no-repeat;
+  background-size: content;
+  width: 100%;
+  height:100%;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  }
+
+}
+
+.Title
+{
+  font-size: 60px;
+  font-family: sans-serif;
+  color:#fff;
+	margin-top:10%;
+	text-align: center;
+	justify-content: center;
+}
+
+.SubTitle
+{
+  font-size: 40px;
+  font-family: serif;
+  color:#aaa;
+	text-align: center;
+	justify-content: center;
+}
+
+.TitleBar
+{
+   background: black;
+   height: 70px;
+   width: 100%;
+}
+
+.PageHeader
+{
+  font-size: 30px;
+  font-family: fantasy;
+  color:#222;
+
+}
+
+.HeaderStyle
+{
+  color:#18a;
+  font-weight:800px;
+  text-decoration: underline;
+  font-size: 26px;
+	text-align: center;
+	margin: 40px;
+}
